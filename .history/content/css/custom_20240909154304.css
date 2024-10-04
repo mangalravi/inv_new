@@ -1,0 +1,225 @@
+:root {
+  --bs-primary: #4D4D4D;
+  --bs-secondary: #3AB44C;
+  --bs-para-color: #37302F;
+  --sec-head:#37302f;
+  --sec-para:#4d4d4d;
+  --
+  --bs-root-font-size: 16px;
+  --bs-body-font-family: 'Inter', sans-serif;
+  --bs-heading-font-family: 'Rubic', sans-serif;
+  --bs-body-font-size: 0.875rem;
+  --bs-body-font-weight: 400;
+  --bs-heading-font-weight:500;
+  --bs-body-line-height: 1.5; 
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  font-family: var(--bs-body-font-family);
+  font-weight: var(--bs-body-font-weight);
+  font-size: var(--bs-body-font-size);
+  line-height: var(--bs-body-line-height);
+}
+section {
+  padding: 70px 0;
+}
+
+p {
+  color: var(--bs-para-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  line-height: 1.875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--bs-heading-font-family);
+  font-weight: var(--bs-heading-font-weight);
+  color: var(--bs-primary);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+
+
+
+.changediv1,
+      .changediv2,
+      .changediv3 {
+        padding: 20px;
+        margin: 50px;
+        border: 5px solid green;
+      }
+      .changediv1 {
+        font-size: 14px;
+      }
+      .changediv2 {
+        font-size: 20px;
+      }
+      .changediv3 {
+        font-size: 24px;
+      }
+      /* Default Light Theme */
+      .theme-light .changediv1,
+      .theme-light .changediv2,
+      .theme-light .changediv3 {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      /* Dark Theme */
+      .theme-dark .changediv1,
+      .theme-dark .changediv2,
+      .theme-dark .changediv3 {
+        background-color: #333333;
+        color: #ffffff;
+      }
+      .theme-dark {
+        background-color: #1b1b1b;
+      }
+      /* High Contrast Theme */
+      .theme-high-contrast .changediv1,
+      .theme-high-contrast .changediv2,
+      .theme-high-contrast .changediv3 {
+        background-color: #000000;
+        color: #ffff00;
+      }
+      .theme-high-contrast {
+        background-color: #5c3f21;
+      }
+      /* Cookie Consent Banner */
+      .cookieConsent {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        display: none;
+        z-index: 1000;
+      }
+      .cookieConsent button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .cookieConsent .reject {
+        background-color: #f44336;
+      }
+      /* Full Page Overlay */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 900;
+        pointer-events: none;
+      }
+      button:not(.cookieConsent button) {
+        padding: 0.4rem 0.75rem;
+        border: 1px solid #3c3c3c;
+        border-radius: 0.35rem;
+        font-size: 0.875rem;
+        background: transparent;
+      }
+      .theme-dark button:not(.cookieConsent button) {
+        background-color: #ffffff;
+        color: #000;
+        border: 1px solid #fdfdfd;
+      }
+
+      .theme-high-contrast button:not(.cookieConsent button) {
+        background-color: #333333;
+        color: #8fff00;
+        border: 1px solid #f7fb00;
+      }
+.nav-item {  
+  padding: 1rem;
+}
+.nav-item .nav-link{
+  color: #fff;
+  font-size: 1rem;
+  padding:0;
+}
+.nav-item .nav-link.active{
+  color: #dd1515;
+  padding: 0;
+}
+      .tmnl-sec.rltvprod .owl-carousel .item {
+        display: flex;
+        flex: 1 0 auto;
+        height: 100%;
+        padding: 2.2rem .75rem ;
+    }
+    .newprodcrd .pdbox {
+      padding: 55px 20px 30px;
+      box-shadow: 0 2px 10px #0000001a;
+      text-align: center;
+      border-radius: 1.25rem;
+      position: relative;
+  }
+  .newprodcrd .prdIcon {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    background: #e7eef4;
+}
+.newprodcrd .pdbox .prdIcon img {
+  height: 30px;
+  margin: 0;
+  max-width: 100%;
+  transition: .4s ease-in-out;
+}
+.sec-head{
+  font-size:2.25rem;
+}
+.sec-para{
+  font-size:1.5rem;
+}
+.newprodcrd h5 {
+  font-size: 0.95rem;
+}
+.pdbox p {
+  font-size: .825rem;
+}
+.pdbox .btn-main {
+  --bs-btn-padding-x: 1.75rem;
+  --bs-btn-padding-y: 0.65rem;
+  --bs-btn-font-size: 0.775rem;
+}
+.liItem{
+  font-size: 1.25rem;
+}

@@ -1,0 +1,15 @@
+@media(min-width:576px) and (max-width:991px){
+    header ul.d-flex{
+         gap:0.75rem;
+     } 
+
+     :root {
+        --font-size-sec-head: 20px;
+        --font-size-main-para: 14px;
+        --font-size-liItem: 12px;
+        --font-size-hyperelink: 14px;
+        --font-size-cardttl: 16px;
+        --font-size-cardpara: 12px;
+      }
+ }
+ 

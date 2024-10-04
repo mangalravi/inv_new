@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" /> -->
+    <style>
+   ul.list {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%,-50%);
+	 margin: 0;
+	 padding: 0;
+	 list-style-type: none;
+	 text-align: center;
+}
+ ul.list li {
+	 display: inline-block;
+	 margin: 0 3px 9px;
+}
+ ul.list li a {
+	 display: block;
+	 position: relative;
+	 width: 80px;
+	 height: 80px;
+	 overflow: hidden;
+	 color: #fff;
+	 font-family: 'Source Sans Pro', sans-serif;
+	 font-size: 50px;
+	 text-align: center;
+	 text-decoration: none;
+	 line-height: 80px;
+}
+ ul.list li a .icon {
+	 position: relative;
+	 z-index: 2;
+}
+ ul.list li a .circle {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 1;
+	 width: 100%;
+	 height: 100%;
+	 background: #e10558;
+	 border-radius: 100%;
+}
+ ul.list li a .circle:after {
+	 content: '';
+	 position: absolute;
+	 top: 4px;
+	 left: 4px;
+	 width: 72px;
+	 height: 72px;
+	 border-radius: 100%;
+	 background: #d40050;
+}
+ ul.list li a .circle span {
+	 position: absolute;
+	 width: 50%;
+	 height: 100%;
+	 overflow: hidden;
+}
+ ul.list li a .circle span em {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background: #000;
+	 border-radius: 999px;
+	 transition: transform .25s linear;
+}
+ ul.list li a .circle span:first-child {
+	 left: 0;
+}
+ ul.list li a .circle span:first-child em {
+	 left: 100%;
+	 transform-origin: 0% 50%;
+	 border-top-left-radius: 0;
+	 border-bottom-left-radius: 0;
+}
+ ul.list li a .circle span:last-child {
+	 left: 50%;
+}
+ ul.list li a .circle span:last-child em {
+	 left: -100%;
+	 transform-origin: 100% 50%;
+	 border-top-right-radius: 0;
+	 border-bottom-right-radius: 0;
+	 transition-delay: .25s;
+}
+ ul.list li a:hover .circle span:first-child em {
+	 transform: rotate(-180deg);
+	 transition: transform .25s .25s ease-out;
+}
+ ul.list li a:hover .circle span:last-child em {
+	 transform: rotate(-180deg);
+	 transition: transform .25s linear;
+}
+ 
+ 
+    </style>
+</head>
+<body>
+	<ul class="list">
+		<li><a href="#">S</a></li>
+	  </ul>
+	  <script>
+		
+		document.querySelectorAll('a').forEach(function(link) {
+    // Create the necessary elements
+    var iconSpan = document.createElement('span');
+    iconSpan.className = 'icon';
+    iconSpan.innerHTML = link.innerHTML; // Set the inner HTML to the original link's content
+
+    var circleSpan = document.createElement('span');
+    circleSpan.className = 'circle';
+
+    // Create the inner spans with <em> elements
+    for (var i = 0; i < 2; i++) {
+        var innerSpan = document.createElement('span');
+        var em = document.createElement('em');
+        innerSpan.appendChild(em);
+        circleSpan.appendChild(innerSpan);
+    }
+
+    // Clear the original link's content and append the new elements
+    link.innerHTML = ''; // Clear existing content
+    link.appendChild(iconSpan);
+    link.appendChild(circleSpan);
+
+    // Set the attributes
+    link.setAttribute('href', 'http://skapalon.is');
+    link.setAttribute('target', '_blank');
+});
+
+});
+	  </script>
+</body>
+
+
+  
+</html>

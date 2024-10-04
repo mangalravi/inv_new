@@ -1,0 +1,49 @@
+
+body.theme-dark header nav{
+    background:#3691f1;
+  }
+  body.theme-dark {
+    background:#1f1f1f ;
+  }
+  body.theme-dark .sec-head{
+    color:#3691f1;
+  }
+  body.theme-dark .main-para{
+    color:#fff;
+  }
+  body.theme-dark .dropdown-toggle::after {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+}
+  body.theme-dark .dropdown-toggle.active::after {
+    border: solid var(--bs-secondary);
+    border-width: 0 2px 2px 0;
+}
+  body.theme-dark .newprodcrd .pdbox {
+   background: #8900ea;
+  }
+  body.theme-dark .hyperelink {
+    color:#6200ee;
+  }
+  body.theme-dark .nav-item .hyperelink {
+    color:#fff;
+  }
+  body.theme-dark .nav-item.dropdown .dropdown-menu .hyperelink {
+    color:#fff;
+  }
+  body.theme-dark .nav-item .active.hyperelink {
+    color: var(--bs-secondary);
+  }
+  body.theme-dark .pdbox .cardpara ,
+  body.theme-dark .liItem,
+  body.theme-dark .newprodcrd .cardttl{
+    color:#fafafa;
+  }
+  .theme-dark button:not(.cookieConsent button) {
+    background-color: #fff;
+    color: #000;
+    /* border: 1px solid #fdfdfd; */
+  }
+  .theme-dark .topnav button.activetheme{
+    background: #e0ffc6;
+  }

@@ -1,0 +1,43 @@
+:root {
+    --font-size-sec-head: 1.5rem;
+    --font-size-main-para: 15px;
+    --font-size-liItem: 13px;
+    --font-size-hyperelink: 15px;
+    --font-size-cardttl: 17px;
+    --font-size-cardpara: 13px;
+  }
+
+
+
+header ul.d-flex{
+     gap:0.75rem;
+ } 
+
+ .sec-head{
+    font-size: var(--font-size-sec-head) ;
+}
+.main-para{
+    font-size: var(--font-size-main-para);
+    text-align: left;
+}
+.liItem{
+    font-size: var(--font-size-liItem) ;
+}
+.hyperelink{
+    font-size: var(--font-size-hyperelink) ;
+}
+.cardttl{
+    font-size:var(--font-size-cardttl) ;
+}
+.cardpara{
+    font-size: var(--font-size-cardpara) ;
+}
+ .thumbnails.owl-dot,.play-pause {
+    display: none;
+ }
+ section.second-section{
+    padding-top:50px;
+ }
+ .top-most-banner .maindiv h1 {
+    font-size: calc(var(--font-size)* 2);
+ }

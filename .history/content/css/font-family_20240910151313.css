@@ -1,0 +1,51 @@
+/* SPace Grotesk Family */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf") format("ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+   src: url("../fonts/Space_Grotesk/SpaceGrotesk-Medium.ttf") format("ttf");
+  /* font-display: swap; */
+}
+
+/* Playfair Display Font Family */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+ src: url("../fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf") format("ttf");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-SemiBold.ttf") format("truetype");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-ExtraBold.ttf") format("truetype");
+  /* font-display: swap; */
+}
+

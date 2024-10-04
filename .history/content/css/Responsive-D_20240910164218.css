@@ -1,0 +1,6 @@
+@media(max-width:575px) and {
+    header ul.d-flex{
+         gap:1rem;
+     } 
+ }
+ 

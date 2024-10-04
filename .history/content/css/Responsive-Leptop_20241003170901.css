@@ -1,0 +1,10 @@
+@media(min-width:992px) and (max-width:1199px){
+  
+
+ }
+ .thumbnails.owl-dot,.play-pause {
+    display: none;
+ }
+ section.second-section{
+    padding-top:50px;
+ }

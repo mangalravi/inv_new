@@ -1,0 +1,20 @@
+@media(max-width:575px){
+
+    :root {
+        --font-size-sec-head: 20px;
+        --font-size-main-para: 14px;
+        --font-size-liItem: 12px;
+        --font-size-hyperelink: 14px;
+        --font-size-cardttl: 16px;
+        --font-size-cardpara: 12px;
+      }
+   header ul.d-flex{
+        gap:1rem;
+    } 
+
+    .sec-head{
+        font-size: sec ;
+    }
+}
+
+

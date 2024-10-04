@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .menu a {
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Lato;
+        font-size: 17pt;
+        font-weight: 400;
+        padding: 15px 25px;
+        /**/
+        position: relative;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      
+.SMN_effect-6 a {
+	padding: 10px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.SMN_effect-6 a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 10px 0;
+	max-width: 0;
+	border-bottom: 2px solid #c8a755;
+	color: #c8a755;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+}
+
+.SMN_effect-6 a:hover:before, .SMN_effect-6 a:focus:before {
+	max-width: 100%;
+}
+    </style>
+</head>
+<link
+href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+rel="stylesheet"
+/>
+
+<body class="container mx-auto px-4 sm:px-12 py-8">
+<h1 class="mt-12 font-semibold mb-4 text-xl">1. Carousel with scroll and slide-track</h1>
+<div class="slider">
+<div class="slide-track">
+  <div class="slide bg-red-500">1</div>
+  <div class="slide bg-purple-500">2</div>
+  <div class="slide bg-blue-500">3</div>
+  <div class="slide bg-indigo-500">4</div>
+  <div class="slide bg-pink-500">5</div>
+  <div class="slide bg-green-500">6</div>
+  <div class="slide bg-yellow-500">7</div>
+  <div class="slide bg-red-500">8</div>
+  <div class="slide bg-gray-500 text-white">9</div>
+  <div class="slide bg-blue-800">0</div>
+  <!-- same 9 slides doubled (duplicate) -->
+  <div class="slide bg-red-500">1</div>
+  <div class="slide bg-purple-500">2</div>
+  <div class="slide bg-blue-500">3</div>
+  <div class="slide bg-indigo-500">4</div>
+  <div class="slide bg-pink-500">5</div>
+  <div class="slide bg-green-500">6</div>
+  <div class="slide bg-yellow-500">7</div>
+  <div class="slide bg-red-500">8</div>
+  <div class="slide bg-gray-500 text-white">9</div>
+  <div class="slide bg-blue-800">0</div>
+</div>
+</div>
+
+<!--  Carousel 2 -->
+<h1 class="mt-12 mb-4 font-semibold  text-xl">2. Carousel 2 with scroll2 and slide-track2</h1>
+<div class="slider">
+<div class="slide-track2">
+  <div class="slide bg-red-500">1</div>
+  <div class="slide bg-purple-500">2</div>
+  <div class="slide bg-blue-500">3</div>
+  <div class="slide bg-green-500">4</div>
+  <div class="slide bg-pink-500">5</div>
+
+  <!-- same 5 slides doubled (duplicate)-->
+  <div class="slide bg-red-500">1</div>
+  <div class="slide bg-purple-500">2</div>
+  <div class="slide bg-blue-500">3</div>
+  <div class="slide bg-green-500">4</div>
+  <div class="slide bg-pink-500">5</div>
+  <!-- same 5 slides tripled (duplicate 2)-->
+  <div class="slide bg-red-500">1</div>
+  <div class="slide bg-purple-500">2</div>
+  <div class="slide bg-blue-500">3</div>
+  <div class="slide bg-green-500">4</div>
+  <div class="slide bg-pink-500">5</div>
+</div>
+</div>
+
+</body>
+    
+</body>
+</html>

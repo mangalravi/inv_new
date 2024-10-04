@@ -1,0 +1,11 @@
+@media(max-width:575px){
+   header ul.d-flex{
+        gap:1rem;
+    } 
+
+    .sec-head{
+        font-size: 1rem !important;
+    }
+}
+
+

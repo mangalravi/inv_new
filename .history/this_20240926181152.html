@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" /> -->
+    <style>
+        .menu a {
+            padding: 10px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgba(121, 18, 18, 0.8);
+            font-family: Lato;
+            font-size: 17pt;
+            font-weight: 400;
+            padding: 15px 25px;
+            position: relative;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .menu a:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            padding: 10px 0;
+            max-width: 0;
+            border-bottom: 2px solid #c8a755;
+            color: #c8a755;
+            content: attr(data-hover);
+            transition: max-width 0.5s;
+        }
+
+        .menu a:hover:before, ..menu a focus:before {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="container mx-auto px-4 sm:px-12 py-8">
+    <ul class="menu SMN_effect-6">
+        <li><a href="#" data-hover="Contact">Contact</a></li>
+    </ul>
+</body>
+</html>

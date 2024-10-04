@@ -1,0 +1,49 @@
+
+body.theme-high-contrast header nav{
+    background:transparent ;
+  }
+.theme-high-contrast .sec-head{
+    color:#ff0;
+  }
+.theme-high-contrast .main-para{
+    color:#fff;
+  }
+.theme-high-contrast .newprodcrd .pdbox {
+   background: #243a5e;
+  }
+.theme-high-contrast .liItem ,
+.theme-high-contrast .pdbox .cardpara,
+.theme-high-contrast .newprodcrd .cardttl{
+    color:#fafafa;
+  }
+.theme-high-contrast .hyperelink {
+    color:var(--cont-theme);
+  }
+  .theme-high-contrast .nav-item .hyperelink {
+    color:#ff0;
+  }
+  .theme-high-contrast .nav-item.dropdown .dropdown-menu .hyperelink {
+    color:#000;
+  }
+  .theme-high-contrast  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    background:#ff0;
+}
+  .theme-high-contrast  .navbar-expand-lg .navbar-nav .dropdown-menu li{
+   border-bottom:1px dashed #c1c1c1;
+  }
+  .theme-high-contrast  .navbar-expand-lg .navbar-nav .dropdown-menu li:last-child{
+   border-bottom:0;
+  }
+.theme-high-contrast .nav-item .active.hyperelink {
+    color: var(--bs-secondary);
+  }
+
+ .theme-high-contrast button.navbar-toggler:not(.cookieConsent button) {
+    background-color: #fff;
+  } 
+  .theme-high-contrast {
+    background-color: #000;
+  }
+  .theme-high-contrast .topnav button.activetheme{
+    background: #e0ffc6;
+  }

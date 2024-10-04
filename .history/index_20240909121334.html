@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+ <link rel="stylesheet" href="content/css/custom.css">
+  </head>
+  <body class="theme-light">
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookieConsent">
+      <p>
+        This website uses cookies to ensure you get the best experience on our
+        website.
+      </p>
+      <button onclick="acceptCookies()">Got it!</button>
+      <button class="reject" onclick="rejectCookies()">No, thanks</button>
+    </div>
+
+    <!-- Full Page Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <div style="text-align: center">
+      <h1 style="color: green">Font size and color contrast</h1>
+      <button
+        type="button"
+        onclick="changeSizeByBtn(-2, ['changediv1', 'changediv2', 'changediv3'])"
+      >
+        Smaller
+      </button>
+      <button
+        type="button"
+        onclick="resetSize(['changediv1', 'changediv2', 'changediv3'])"
+      >
+        Regular
+      </button>
+      <button
+        type="button"
+        onclick="changeSizeByBtn(2, ['changediv1', 'changediv2', 'changediv3'])"
+      >
+        Larger
+      </button>
+      <br /><br />
+      <button type="button" onclick="changeTheme('theme-light')">
+        Light Theme
+      </button>
+      <button type="button" onclick="changeTheme('theme-dark')">
+        Dark Theme
+      </button>
+      <button type="button" onclick="changeTheme('theme-high-contrast')">
+        High Contrast Theme
+      </button>
+      <br /><br />
+      <div id="changediv1" class="changediv1">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque
+          perspiciatis natus pariatur fugiat distinctio praesentium magnam
+          inventore? Sit quo ipsam esse quos distinctio delectus earum neque, ex
+          necessitatibus, rem soluta, nihil maiores placeat fugiat ipsum modi.
+          Tempora, laudantium hic.
+        </p>
+      </div>
+      <div id="changediv2" class="changediv2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque
+          perspiciatis natus pariatur fugiat distinctio praesentium magnam
+          inventore? Sit quo ipsam esse quos distinctio delectus earum neque, ex
+          necessitatibus, rem soluta, nihil maiores placeat fugiat ipsum modi.
+          Tempora, laudantium hic.
+        </p>
+      </div>
+      <div id="changediv3" class="changediv3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque
+          perspiciatis natus pariatur fugiat distinctio praesentium magnam
+          inventore? Sit quo ipsam esse quos distinctio delectus earum neque, ex
+          necessitatibus, rem soluta, nihil maiores placeat fugiat ipsum modi.
+          Tempora, laudantium hic.
+        </p>
+      </div>
+      <input
+        type="range"
+        min="10"
+        max="30"
+        id="slider"
+        value="20"
+        onchange="changeSizeBySlider()"
+      />
+    </div>
+    <script src="content/js/custom.js"> </script>
+  </body>
+</html>

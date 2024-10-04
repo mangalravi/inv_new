@@ -1,0 +1,38 @@
+
+body.theme-dark header nav{
+    background:#6200ee ;
+  }
+  body.theme-dark {
+    background:#212529 ;
+  }
+  body.theme-dark .sec-head{
+    color:var(--bs-secondary);
+  }
+  body.theme-dark .main-para{
+    color:#fff;
+  }
+  body.theme-dark .newprodcrd .pdbox {
+   background: #8900ea;
+  }
+  body.theme-dark .hyperelink {
+    color:#6200ee;
+  }
+  body.theme-dark .nav-item .hyperelink {
+    color:#fff;
+  }
+  body.theme-dark .nav-item .active.hyperelink {
+    color: var(--bs-secondary);
+  }
+  body.theme-dark .pdbox .cardpara ,
+  body.theme-dark .liItem,
+  body.theme-dark .newprodcrd .cardttl{
+    color:#fafafa;
+  }
+  .theme-dark button:not(.cookieConsent button) {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fdfdfd;
+  }
+  .theme-high-contrast .topnav button.activetheme:not(.cookieConsent button){
+    background: #e0ffc6;
+  }

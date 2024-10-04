@@ -1,0 +1,34 @@
+/* Space Grotesk Family */
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Space_Grotesk/SpaceGrotesk-Medium.ttf") format("truetype");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Space_Grotesk/SpaceGrotesk-Bold.ttf") format("truetype");
+  /* font-display: swap; */
+}
+/* Manrope Family */
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Manrope/") format("truetype");
+  /* font-display: swap; */
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Space_Grotesk/SpaceGrotesk-Bold.ttf") format("truetype");
+  /* font-display: swap; */
+}
