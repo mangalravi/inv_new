@@ -55,10 +55,6 @@ footer .socialicon {
  h2 + a {
  min-width: 100px;
 }
- h2 + a::after:hover {
- width: 75%;
- transition: all 0.7s;
-}
 
 footer {
     padding-top: 50px;

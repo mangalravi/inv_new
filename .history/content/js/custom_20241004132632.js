@@ -177,7 +177,9 @@ function handleResponsiveStyles() {
     loadCSS("content/css/Responsive-Desktop.css"); // For widths between 576px and 767px
   } else if (viewportWidth >= 768 && viewportWidth < 991) {
     loadCSS("content/css/Responsive-Leptop.css"); // For widths between 768px and 991px
-  }
+  } else if (viewportWidth >= 576 && viewportWidth < 991) {
+    loadCSS("content/css/Responsive-MidRange.css"); // For widths between 576px and 991px
+  } 
 }
 function loadCSS(href) {
   if (!$(`link[href="${href}"]`).length) {

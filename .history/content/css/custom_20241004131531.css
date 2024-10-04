@@ -265,7 +265,11 @@ header.nvbrhdr.bg-white .bgsec{
   font-weight: 700;
 }
 
-
+.submenu iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
 .submenu .prntmnlnk a {
   color: #646669;
   font-size: 0.875rem;
@@ -307,6 +311,12 @@ transition:all 0.7s;
  .submenu li.active, .submenu li:hover {
     background: #f2f2f2;
  }
+
+  .submenu iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+ }
   .submenu .prntmnlnk a {
     color: #646669;
     font-size: 0.875rem;
@@ -319,6 +329,8 @@ transition:all 0.7s;
   .parent-menu:hover, .parent-menu:focus {
     outline: none;
  }
+
+
   .parent-menu:hover > span, .parent-menu:focus > span {
     transform: rotate(-135deg);
     top: 2.25rem;
@@ -351,9 +363,9 @@ transition:all 0.7s;
   transition: all 0.3s ease-in-out;
 }
 .submenu iframe {
- border-radius: 0.5rem;
- width: 100%;
- height: 250px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
 }
 .submenu .prntmnlnk a {
   color: #646669;

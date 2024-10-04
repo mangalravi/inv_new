@@ -55,7 +55,7 @@ footer .socialicon {
  h2 + a {
  min-width: 100px;
 }
- h2 + a::after:hover {
+ h2 + a::after {
  width: 75%;
  transition: all 0.7s;
 }

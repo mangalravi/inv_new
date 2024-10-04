@@ -49,15 +49,9 @@ footer .socialicon {
  .sec-head {
     font-size: calc(var(--font-size)* 1.25);
     text-align: start;
-    margin-bottom: 1rem;
-    line-height: 30px;
  }
  h2 + a {
  min-width: 100px;
-}
- h2 + a::after:hover {
- width: 75%;
- transition: all 0.7s;
 }
 
 footer {
