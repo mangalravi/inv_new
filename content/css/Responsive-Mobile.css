@@ -3,16 +3,16 @@ header ul.d-flex{
 } 
 
 .main-para{
-    font-size: var(--font-size-main-para);
-    text-align: left;
+    font-size: var(--font-size);
 }
-
 section,.start-project{
     padding:50px 0;
 }
 footer .socialicon {
-    display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
+}
+footer .socialicon li a img {
+    height: 25px;
 }
 .insidesec {
      padding: 50px 20px 100px;
@@ -35,8 +35,7 @@ footer .socialicon {
     padding-top:50px;
  }
  .sec-head {
-    font-size: calc(var(--font-size)* 1.25);
-    text-align: start;
+    font-size: calc(var(--font-size)* 1.5);
     margin-bottom: 1rem;
     line-height: 30px;
  }
@@ -53,7 +52,6 @@ footer {
 }
 .top-most-banner .maindiv h1 {
     font-size: calc(var(--font-size)* 2);
-        margin-bottom: 1.5rem;
  }
  .top-most-banner .maindiv h1 + p{
     font-size: var(--font-size);
@@ -67,9 +65,17 @@ footer {
   .start-project a .logo:nth-child(2){
     animation-play-state:running;
   }
-  footer ul.lstftr {
-    justify-content: start;
-  }
   .mb50 {
     margin-bottom: 1.5rem;
+  }
+  .client .slick-track > * {
+   min-width: 150px;
+}
+
+.navbar-collapse{
+    height:100vh;
+}
+.navbar-nav{
+    padding-bottom: 5rem;
+    padding-top: 2rem;
   }

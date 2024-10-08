@@ -45,3 +45,14 @@ footer .socialicon {
   footer ul.lstftr {
     justify-content: start;
   }
+  .client .slick-track > * {
+    min-width: 300px;
+ }
+
+ .navbar-collapse{
+    height:100vh;
+}
+.navbar-nav{
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+  }

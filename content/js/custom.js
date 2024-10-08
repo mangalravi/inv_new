@@ -172,11 +172,11 @@ function handleResponsiveStyles() {
     loadCSS("content/css/High-Contrast.css");
   }
   if (viewportWidth < 576) {
-    loadCSS("content/css/Responsive-Mobile.css"); // For widths < 575px
+    loadCSS("content/css/Responsive-Mobile.css");
   } else if (viewportWidth >= 576 && viewportWidth < 767) {
-    loadCSS("content/css/Responsive-Desktop.css"); // For widths between 576px and 767px
+    loadCSS("content/css/Responsive-Desktop.css");
   } else if (viewportWidth >= 768 && viewportWidth < 991) {
-    loadCSS("content/css/Responsive-Leptop.css"); // For widths between 768px and 991px
+    loadCSS("content/css/Responsive-Leptop.css");
   }
 }
 function loadCSS(href) {
@@ -198,13 +198,13 @@ $(window).scroll(function () {
     $(".nvbrhdr").removeClass("bg-white");
   }
 });
-$(document).ready(function(){
-  $("#gallery").slick({
+$(document).ready(function () {
+  $(".gallery").slick({
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 2000,
+    speed: 3000,
     infinite: true,
     arrows: false,
     cssEase: "linear",
@@ -224,7 +224,7 @@ $(document).ready(function(){
     //         }
     //     },
     //     {
-    //         breakpoint: 991, 
+    //         breakpoint: 991,
     //         settings: {
     //             slidesToShow: 3,
     //         }
@@ -236,21 +236,20 @@ $(document).ready(function(){
     //         }
     //     },
     //     {
-    //         breakpoint: 480, 
+    //         breakpoint: 480,
     //         settings: {
     //             slidesToShow: 1,
     //         }
     //     }
     // ]
-});
-
+  });
 
   // Prevent the default behavior on click and mouse down events
-  $("#gallery").on("mousedown", function (event) {
+  $(".gallery").on("mousedown", function (event) {
     event.preventDefault();
   });
 
-  $("#gallery").on("click", function (event) {
+  $(".gallery").on("click", function (event) {
     event.preventDefault();
   });
 });
@@ -323,15 +322,158 @@ $(function () {
     fade: false,
     autoplaySpeed: 3000,
   });
-
-
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   let openSubmenu = null; // Reference to the currently open submenu
+
+//   // Function to handle tab switching for each parent menu
+//   function handleTabSwitch(parentMenu) {
+//     const tabLinks = parentMenu.querySelectorAll(".tab-link");
+//     const tabContents = parentMenu.querySelectorAll(".tab");
+//     const submenu = parentMenu.querySelector(".submenu"); // Assuming submenu has a class "submenu"
+
+//     // Initially hide the submenu
+//     submenu.style.display = "none";
+
+//     // Function to toggle the submenu visibility
+//     const toggleSubmenu = () => {
+//       if (openSubmenu && openSubmenu !== submenu) {
+//         openSubmenu.style.display = "none"; // Close the currently open submenu
+//       }
+
+//       // Toggle the submenu visibility
+//       const isSubmenuOpen = submenu.style.display === "block";
+//       submenu.style.display = isSubmenuOpen ? "none" : "block";
+
+//       // Update the reference to the currently open submenu
+//       openSubmenu = submenu.style.display === "block" ? submenu : null;
+//     };
+
+//     // Add click event listener to parent menu for toggling submenu
+//     parentMenu.addEventListener("click", (event) => {
+//       if (event.target.classList.contains("parent-menu") || event.target.closest(".parent-menu")) {
+//         toggleSubmenu();
+//         event.stopPropagation(); // Prevent the event from bubbling up
+//       }
+//     });
+
+//     // Add hover event listeners to show/hide submenu for desktop
+//     parentMenu.addEventListener("mouseenter", () => {
+//       if (window.innerWidth > 991) { // Change this breakpoint as necessary
+//         submenu.style.display = "block";
+//       }
+//     });
+
+//     parentMenu.addEventListener("mouseleave", () => {
+//       if (window.innerWidth > 991) { // Change this breakpoint as necessary
+//         submenu.style.display = "none"; // Hide submenu on mouse leave
+//         openSubmenu = null; // Reset the reference
+//       }
+//     });
+
+//     tabLinks.forEach((link) => {
+//       const tabId = link.getAttribute("data-tab");
+//       const activeTab = parentMenu.querySelector(`#${tabId}`);
+
+//       // Function to show the corresponding tab
+//       const showTab = (event) => {
+//         event.preventDefault();
+
+//         // Remove active class from all tab links and hide all tab contents
+//         tabLinks.forEach((link) => link.classList.remove("active"));
+//         tabContents.forEach((content) => (content.style.display = "none"));
+
+//         // Add active class to the clicked tab link
+//         link.classList.add("active");
+
+//         // Show the corresponding tab
+//         if (activeTab) {
+//           activeTab.style.display = "block";
+//         }
+//       };
+
+//       // Add click event listener for tabs
+//       link.addEventListener("click", showTab);
+//       // Add hover event listener for tabs
+//       link.addEventListener("mouseenter", showTab);
+//     });
+
+//     // Ensure only one tab is displayed at a time
+//     tabContents.forEach((tab) => {
+//       tab.addEventListener("mouseenter", () => {
+//         tab.style.display = "block"; // Keep tab content visible
+//       });
+//     });
+
+//     // Optionally, show the first tab by default
+//     if (tabLinks.length > 0) {
+//       tabLinks[0].click();
+//     }
+//   }
+
+//   // Select all parent menus and apply the tab switch functionality to each
+//   const parentMenus = document.querySelectorAll(".parent-menu");
+//   parentMenus.forEach((menu) => {
+//     handleTabSwitch(menu);
+//   });
+// });
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
+  let openSubmenu = null; // Reference to the currently open submenu
+
   // Function to handle tab switching for each parent menu
   function handleTabSwitch(parentMenu) {
     const tabLinks = parentMenu.querySelectorAll(".tab-link");
     const tabContents = parentMenu.querySelectorAll(".tab");
+    const submenu = parentMenu.querySelector(".submenu"); // Assuming submenu has a class "submenu"
+
+    // Check if submenu exists
+    if (submenu) {
+      // Initially hide the submenu
+      submenu.style.display = "none";
+
+      // Function to toggle the submenu visibility
+      const toggleSubmenu = () => {
+        if (openSubmenu && openSubmenu !== submenu) {
+          openSubmenu.style.display = "none"; // Close the currently open submenu
+        }
+
+        // Toggle the submenu visibility
+        const isSubmenuOpen = submenu.style.display === "block";
+        submenu.style.display = isSubmenuOpen ? "none" : "block";
+
+        // Update the reference to the currently open submenu
+        openSubmenu = submenu.style.display === "block" ? submenu : null;
+      };
+
+      // Add click event listener to parent menu for toggling submenu
+      parentMenu.addEventListener("click", (event) => {
+        if (event.target.classList.contains("parent-menu") || event.target.closest(".parent-menu")) {
+          toggleSubmenu();
+          event.stopPropagation(); // Prevent the event from bubbling up
+        }
+      });
+
+      // Add hover event listeners to show/hide submenu for desktop
+      parentMenu.addEventListener("mouseenter", () => {
+        if (window.innerWidth > 991) { // Change this breakpoint as necessary
+          submenu.style.display = "block";
+        }
+      });
+
+      parentMenu.addEventListener("mouseleave", () => {
+        if (window.innerWidth > 991) { // Change this breakpoint as necessary
+          submenu.style.display = "none"; // Hide submenu on mouse leave
+          openSubmenu = null; // Reset the reference
+        }
+      });
+    }
 
     tabLinks.forEach((link) => {
       const tabId = link.getAttribute("data-tab");
@@ -345,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tabLinks.forEach((link) => link.classList.remove("active"));
         tabContents.forEach((content) => (content.style.display = "none"));
 
-        // Add active class to the clicked or hovered tab link
+        // Add active class to the clicked tab link
         link.classList.add("active");
 
         // Show the corresponding tab
@@ -353,25 +495,35 @@ document.addEventListener("DOMContentLoaded", function () {
           activeTab.style.display = "block";
         }
       };
-      // Add click event listener
+
+      // Add click event listener for tabs
       link.addEventListener("click", showTab);
-      // Add hover event listener
+      // Add hover event listener for tabs
       link.addEventListener("mouseenter", showTab);
     });
+
     // Ensure only one tab is displayed at a time
     tabContents.forEach((tab) => {
       tab.addEventListener("mouseenter", () => {
         tab.style.display = "block"; // Keep tab content visible
       });
     });
+
     // Optionally, show the first tab by default
     if (tabLinks.length > 0) {
       tabLinks[0].click();
     }
   }
+
   // Select all parent menus and apply the tab switch functionality to each
   const parentMenus = document.querySelectorAll(".parent-menu");
   parentMenus.forEach((menu) => {
     handleTabSwitch(menu);
+  });
+
+  // Ensure all submenus are closed on page load
+  const allSubmenus = document.querySelectorAll(".submenu");
+  allSubmenus.forEach((submenu) => {
+    submenu.style.display = "none"; // Close all submenus
   });
 });

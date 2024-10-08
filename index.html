@@ -20,10 +20,10 @@
     <link rel="stylesheet" type="text/css" href="content/css/custom.css" />
   </head>
   <body class="theme-light">
-    <header class="nvbrhdr">
-      <div class="bgsec">
+    <header class="nvbrhdr position-fixed w-100">
+      <div class="bgsec d-flex align-items-center">
         <div class="container">
-          <div class="topnav">
+          <div class="topnav d-flex align-items-center justify-content-end position-relative text-center text-white p-0">
             <a href="#" class="btn-top">Contact Us</a>
             <a href="#" class="btn-top">Employee Login</a>
             <div class="tpnv">
@@ -31,10 +31,10 @@
                 <div class="tglimg ps-2">
                   <img src="content/images/accessibility.svg" alt="" />
                 </div>
-                <ul class="selected">
+                <ul class="selected position-absolute">
                   <li class="bdrbtm">
-                    <h5>Font Size</h5>
-                    <div class="btndv">
+                    <h5 class="m-0">Font Size</h5>
+                    <div class="btndv d-flex">
                       <button type="button" id="incbtn">
                         <img src="content/images/A+.svg" alt="" />
                       </button>
@@ -48,7 +48,7 @@
                   </li>
                   <li>
                     <h5>Color Contrast</h5>
-                    <div class="btndv">
+                    <div class="btndv d-flex">
                       <button
                         type="button"
                         class="theme-btn"
@@ -100,66 +100,66 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end"
+            class="collapse navbar-collapse justify-content-end overflow-y-auto"
             id="navbarSupportedContent"
           >
-            <ul class="navbar-nav d-flex justify-content-lg-end flex-row flex-wrap">
+            <ul class="navbar-nav d-flex justify-content-lg-end flex-wrap">
               <li class="parent-menu hvrmnu parentmenu1">
                 <a href="#">About US <span class="menu-arrow"></span></a>
                 <div class="prodlist submenu">
                   <div class="tabs">
                     <div class="row">
                       <div class="col-md-3">
-                        <ul class="tab-links">
-                          <li class="tab-link" data-tab="tab1">
+                        <ul class="tab-links m-0 p-0 me-3 flex-column d-flex">
+                          <li class="tab-link position-relative flex-row" data-tab="tab1">
                             <a href="#">About Us</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab2">
+                          <li class="tab-link position-relative flex-row" data-tab="tab2">
                             <a href="#">Company Profile</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab3">
+                          <li class="tab-link position-relative flex-row" data-tab="tab3">
                             <a href="#">Virtual Introduction </a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab4">
+                          <li class="tab-link position-relative flex-row" data-tab="tab4">
                             <a href="#">Office Locations</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab5">
+                          <li class="tab-link position-relative flex-row" data-tab="tab5">
                             <a href="#">Our Team</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab6">
+                          <li class="tab-link position-relative flex-row" data-tab="tab6">
                             <a href="#">Our Clients</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab7">
+                          <li class="tab-link position-relative flex-row" data-tab="tab7">
                             <a href="#">Certificates</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab8">
+                          <li class="tab-link position-relative flex-row" data-tab="tab8">
                             <a href="#">Events News</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab9">
+                          <li class="tab-link position-relative flex-row" data-tab="tab9">
                             <a href="#">Gallery</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
@@ -197,8 +197,8 @@
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                   allowfullscreen
                                 >
-                                </iframe>
-                              </div>
+                                </iframe> 
+                                 </div>
                             </div>
                           </div>
                           <div id="tab2" class="tab">
@@ -223,13 +223,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -255,13 +249,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -287,13 +275,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -319,13 +301,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -351,13 +327,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -383,13 +353,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -415,13 +379,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -447,13 +405,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -469,26 +421,26 @@
                   <div class="tabs">
                     <div class="row">
                       <div class="col-md-3">
-                        <ul class="tab-links">
-                          <li class="tab-link" data-tab="tab1">
+                        <ul class="tab-links m-0 p-0 me-3 flex-column d-flex list-style-type-none">
+                          <li class="tab-link position-relative flex-row" data-tab="tab1">
                             <a href="#">About Us</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab2">
+                          <li class="tab-link position-relative flex-row" data-tab="tab2">
                             <a href="#">Company Profile</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab3">
+                          <li class="tab-link position-relative flex-row" data-tab="tab3">
                             <a href="#">Virtual Introduction </a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab4">
+                          <li class="tab-link position-relative flex-row" data-tab="tab4">
                             <a href="#">Office Locations</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
@@ -520,13 +472,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -552,13 +498,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -584,13 +524,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -616,13 +550,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -638,20 +566,20 @@
                   <div class="tabs">
                     <div class="row">
                       <div class="col-md-3">
-                        <ul class="tab-links">
-                          <li class="tab-link" data-tab="tab1">
+                        <ul class="tab-links m-0 p-0 me-3 flex-column d-flex list-style-type-none">
+                          <li class="tab-link position-relative flex-row" data-tab="tab1">
                             <a href="#">About Us</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab2">
+                          <li class="tab-link position-relative flex-row" data-tab="tab2">
                             <a href="#">Company Profile</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab3">
+                          <li class="tab-link position-relative flex-row" data-tab="tab3">
                             <a href="#">Virtual Introduction </a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
@@ -683,13 +611,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -715,13 +637,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -747,13 +663,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -769,56 +679,56 @@
                   <div class="tabs">
                     <div class="row">
                       <div class="col-md-3">
-                        <ul class="tab-links">
-                          <li class="tab-link" data-tab="tab1">
+                        <ul class="tab-links m-0 p-0 me-3 flex-column d-flex list-style-type-none">
+                          <li class="tab-link position-relative flex-row" data-tab="tab1">
                             <a href="#">About Us</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab2">
+                          <li class="tab-link position-relative flex-row" data-tab="tab2">
                             <a href="#">Company Profile</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab3">
+                          <li class="tab-link position-relative flex-row" data-tab="tab3">
                             <a href="#">Virtual Introduction </a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab4">
+                          <li class="tab-link position-relative flex-row" data-tab="tab4">
                             <a href="#">Office Locations</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab5">
+                          <li class="tab-link position-relative flex-row" data-tab="tab5">
                             <a href="#">Our Team</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab6">
+                          <li class="tab-link position-relative flex-row" data-tab="tab6">
                             <a href="#">Our Clients</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab7">
+                          <li class="tab-link position-relative flex-row" data-tab="tab7">
                             <a href="#">Certificates</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab8">
+                          <li class="tab-link position-relative flex-row" data-tab="tab8">
                             <a href="#">Events News</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab9">
+                          <li class="tab-link position-relative flex-row" data-tab="tab9">
                             <a href="#">Gallery</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
@@ -850,13 +760,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -882,13 +786,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -914,13 +812,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -946,13 +838,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -978,13 +864,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1010,13 +890,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1042,13 +916,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1074,13 +942,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1106,13 +968,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1128,56 +984,56 @@
                   <div class="tabs">
                     <div class="row">
                       <div class="col-md-3">
-                        <ul class="tab-links">
-                          <li class="tab-link" data-tab="tab1">
+                        <ul class="tab-links m-0 p-0 me-3 flex-column d-flex list-style-type-none">
+                          <li class="tab-link position-relative flex-row" data-tab="tab1">
                             <a href="#">About Us</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab2">
+                          <li class="tab-link position-relative flex-row" data-tab="tab2">
                             <a href="#">Company Profile</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab3">
+                          <li class="tab-link position-relative flex-row" data-tab="tab3">
                             <a href="#">Virtual Introduction </a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab4">
+                          <li class="tab-link position-relative flex-row" data-tab="tab4">
                             <a href="#">Office Locations</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab5">
+                          <li class="tab-link position-relative flex-row" data-tab="tab5">
                             <a href="#">Our Team</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab6">
+                          <li class="tab-link position-relative flex-row" data-tab="tab6">
                             <a href="#">Our Clients</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab7">
+                          <li class="tab-link position-relative flex-row" data-tab="tab7">
                             <a href="#">Certificates</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab8">
+                          <li class="tab-link position-relative flex-row" data-tab="tab8">
                             <a href="#">Events News</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
                             >
                           </li>
-                          <li class="tab-link" data-tab="tab9">
+                          <li class="tab-link position-relative flex-row" data-tab="tab9">
                             <a href="#">Gallery</a>
                             <span class="material-symbols-outlined"
                               >arrow_forward_ios</span
@@ -1209,13 +1065,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1241,13 +1091,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1273,13 +1117,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1305,13 +1143,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1337,13 +1169,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1369,13 +1195,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1401,13 +1221,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1433,13 +1247,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1465,13 +1273,7 @@
                                 </a>
                               </div>
                               <div class="col-md-6">
-                                <iframe
-                                  src="https://www.youtube.com/embed/z2sD0lB9sYM"
-                                  title="YouTube video player"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen
-                                >
-                                </iframe>
+                               
                               </div>
                             </div>
                           </div>
@@ -1497,7 +1299,7 @@
             <div class="container h-72">
               <div class="row h-100 align-items-center">
                 <div class="col-md-7">
-                  <h1>Powering the Future of Energy with AI</h1>
+                  <h1 class="mb-4">Powering the Future of Energy with AI</h1>
                   <p>
                     UGO-Head End System is a versatile, city-wide platform for
                     device management and IoT communication.
@@ -1517,7 +1319,7 @@
             <div class="container h-72">
               <div class="row h-100 align-items-center">
                 <div class="col-md-7">
-                  <h1 class="text-light">
+                  <h1 class="text-light mb-4">
                     Powering the Future of Energy with AI
                   </h1>
                   <p class="text-light">
@@ -1539,7 +1341,7 @@
             <div class="container h-72">
               <div class="row h-100 align-items-center">
                 <div class="col-md-7">
-                  <h1>Powering the Future of Energy with AI</h1>
+                  <h1 class="mb-4">Powering the Future of Energy with AI</h1>
                   <p>
                     UGO-Head End System is a versatile, city-wide platform for
                     device management and IoT communication.
@@ -1559,7 +1361,7 @@
             <div class="container h-72">
               <div class="row h-100 align-items-center">
                 <div class="col-md-7">
-                  <h1>Powering the Future of Energy with AI</h1>
+                  <h1 class="mb-4">Powering the Future of Energy with AI</h1>
                   <p>
                     UGO-Head End System is a versatile, city-wide platform for
                     device management and IoT communication.
@@ -1686,7 +1488,7 @@
           </div>
         </div>
         <div class="row g-4">
-          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="col-sm-6  col-lg-3 d-flex">
             <div class="overflow-hidden w-100">
               <a href="#" class="top-img">
                 <img src="content/images/2nd-fold-card1.jpg" alt="" />
@@ -1701,7 +1503,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="col-sm-6  col-lg-3 d-flex">
             <div class="overflow-hidden w-100">
               <a href="#" class="top-img txtpri tscndshd">
                 <img src="content/images/2nd-fold-card2.jpg" alt="" />
@@ -1715,7 +1517,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="col-sm-6  col-lg-3 d-flex">
             <div class="overflow-hidden w-100">
               <a href="#" class="top-img">
                 <img src="content/images/2nd-fold-card3.jpg" alt="" />
@@ -1727,7 +1529,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+          <div class="col-sm-6  col-lg-3 d-flex">
             <div class="overflow-hidden w-100">
               <a href="#" class="top-img txtpri tscndshd">
                 <img src="content/images/2nd-fold-card4.jpg" alt="" />
@@ -1747,7 +1549,7 @@
     <section class="third-section">
       <div class="container">
         <div class="row justify-content-center text-center">
-          <div class="col-md-11">
+          <div class="col-md-10">
             <h2 class="sec-head">
               Bringing Customers and Grid Together To Serve the Future of
               Utility Needs
@@ -1763,14 +1565,14 @@
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4 d-flex">
-            <a href="#" class="prod-card">
+            <a href="#" class="prod-card bg-white">
               <div class="overflow-hidden">
                 <img
                   src="content/images/smart-metering-solution.jpg"
                   alt="smart-metering"
                 />
               </div>
-              <div class="btmprod">
+              <div class="btmprod pt-0">
                 <h3 class="card-head">Smart Metering Solution</h3>
                 <p>
                   Our SaaS based smart utility billing was purpose-built to
@@ -1787,14 +1589,14 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4 d-flex">
-            <a href="#" class="prod-card">
+            <a href="#" class="prod-card bg-white">
               <div class="overflow-hidden">
                 <img
                   src="content/images/billing-solution.jpg"
                   alt="billing-solution"
                 />
               </div>
-              <div class="btmprod">
+              <div class="btmprod pt-0">
                 <h3 class="card-head">Billing Solution</h3>
                 <p>
                   Our SaaS based smart utility billing was purpose-built to
@@ -1811,14 +1613,14 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4 d-flex">
-            <a href="#" class="prod-card">
+            <a href="#" class="prod-card bg-white">
               <div class="overflow-hidden">
                 <img
                   src="content/images/analytics-solution.jpg"
                   alt="analytics-solution"
                 />
               </div>
-              <div class="btmprod">
+              <div class="btmprod pt-0">
                 <h3 class="card-head">Smart Metering Solution</h3>
                 <p>
                   Our SaaS based smart utility billing was purpose-built to
@@ -1902,41 +1704,41 @@
           </div>
         </div>
       </div>
-      <div id="gallery">
-        <div class="">
+      <div class="gallery">
+        <div class="slickimg">
           <img src="content/images/ireps.png" alt="ireps" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/hp.png" alt="hp" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/pvvnl.png" alt="pvvnl" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/TPDDL.png" alt="TPDDL" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/uhbvn.png" alt="uhbvn" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/TPSODL.png" alt="TPSODL" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/ireps.png" alt="ireps" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/hp.png" alt="hp" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/pvvnl.png" alt="pvvnl" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/TPDDL.png" alt="TPDDL" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/uhbvn.png" alt="uhbvn" />
         </div>
-        <div class="">
+        <div class="slickimg">
           <img src="content/images/TPSODL.png" alt="TPSODL" />
         </div>
       </div>
@@ -1948,10 +1750,10 @@
       <div class="container">
         <div class="row g-4 g-md-3">
           <div class="col-md-6 order-1 order-md-0">
-            <h2 class="sec-head text-start">
+            <h2 class="sec-head text-md-start">
               Take the Digital Maturity Assessment today!
             </h2>
-            <p class="main-para text-start">
+            <p class="main-para text-center text-md-start">
               Transform your utility business with just 10 minutes of effort!
               Generate a sample digital maturity assessment report and gain
               valuable insights. Create a customized digital transformation plan
@@ -1982,7 +1784,7 @@
               </div>
             </div>
             <div class="col-lg-7">
-              <div class="rgttst">
+              <div class="rgttst position-relative">
                 <div class="slick-slider testimonialslide position-relative">
                   <div class="item">
                     <p>
@@ -2071,10 +1873,10 @@
           <div class="col-md-6 col-xl-4 d-flex">
             <a
               href="#"
-              class="top-img"
+              class="top-img d-flex flex-column justify-content-end"
               style="background-image: url(content/images/blog1.jpg)"
             >
-              <span class="date">Article | March 8, 2024</span>
+              <span class="date mb-2 text-white">Article | March 8, 2024</span>
               <h3 class="card-head text-white">
                 Why should you Consider IT consulting Services?
               </h3>
@@ -2089,10 +1891,10 @@
           <div class="col-md-6 col-xl-4 d-flex">
             <a
               href="#"
-              class="top-img"
+              class="top-img d-flex flex-column justify-content-end"
               style="background-image: url(content/images/blog2.jpg)"
             >
-              <span class="date">Article | March 8, 2024</span>
+              <span class="date mb-2 text-white">Article | March 8, 2024</span>
               <h3 class="card-head text-white">
                 A Guide to Know All About IT Staffing
               </h3>
@@ -2108,10 +1910,10 @@
             <div class="d-flex flex-column flex-md-row flex-xl-column gap-3">
               <a
                 href="#"
-                class="top-img"
+                class="top-img d-flex flex-column justify-content-end"
                 style="background-image: url(content/images/blog3.jpg)"
               >
-                <span class="date">Article | March 8, 2024</span>
+                <span class="date mb-2 text-white">Article | March 8, 2024</span>
                 <h3 class="card-head text-white">
                   Top 10 IT Trends in the Utility Industry for 2024
                 </h3>
@@ -2127,7 +1929,7 @@
                 class="top-img"
                 style="background-image: url(content/images/blog4.jpg)"
               >
-                <span class="date">Article | March 8, 2024</span>
+                <span class="date mb-2 text-white">Article | March 8, 2024</span>
                 <h3 class="card-head text-white">
                   Top 10 IT Trends in the Utility Industry for 2024
                 </h3>
@@ -2143,10 +1945,10 @@
         </div>
       </div>
     </section>
-    <section class="social gradback">
+    <section class="social">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center mb50">
-          <h2 class="sec-head mb-0">Corporate Social Responsibilities</h2>
+          <h2 class="sec-head mb-0 text-start text-md-center">Corporate Social Responsibilities</h2>
           <a href="#" class="d-flex align-items-center"
             >View All
             <span class="material-symbols-outlined">arrow_forward </span></a
@@ -2154,17 +1956,17 @@
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4 d-flex">
-            <a href="#" class="socialcard">
+            <a href="#" class="socialcard bg-white">
               <div class="overflow-hidden">
                 <img src="content/images/CSR1.jpg" alt="CSR1" />
               </div>
               <div class="innercntnt">
-                <h3>Blood Donation Camp</h3>
+                <h3 class="mb-4">Blood Donation Camp</h3>
                 <p>
                   Join our Blood Donation Camp and be a hero. Your single
                   donation can save multiple lives and make a lasting impact.
                 </p>
-                <span class="exp"
+                <span class="exp d-inline-flex align-items-center position-relative"
                   >Explore More
                   <span class="material-symbols-outlined"
                     >arrow_forward
@@ -2174,17 +1976,17 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4 d-flex">
-            <a href="#" class="socialcard">
+            <a href="#" class="socialcard bg-white">
               <div class="overflow-hidden">
                 <img src="content/images/CSR2.jpg" alt="CSR2" />
               </div>
               <div class="innercntnt">
-                <h3>Office Cricket Showdown!</h3>
+                <h3 class="mb-4">Office Cricket Showdown!</h3>
                 <p>
                   Office cricket: turning conference rooms into cricket fields
                   and deadlines into boundaries.
                 </p>
-                <span class="exp"
+                <span class="exp d-inline-flex align-items-center position-relative"
                   >Explore More
                   <span class="material-symbols-outlined"
                     >arrow_forward
@@ -2194,18 +1996,18 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4 d-flex">
-            <a href="#" class="socialcard">
+            <a href="#" class="socialcard bg-white">
               <div class="overflow-hidden">
                 <img src="content/images/CSR3.jpg" alt="CSR3" />
               </div>
               <div class="innercntnt">
-                <h3>Passion Meets Celebration!</h3>
+                <h3 class="mb-4">Passion Meets Celebration!</h3>
                 <p>
                   Join us for a dynamic blend of music, creativity, and
                   unforgettable moments that celebrate the best of youth
                   culture.
                 </p>
-                <span class="exp"
+                <span class="exp d-inline-flex align-items-center position-relative"
                   >Explore More
                   <span class="material-symbols-outlined"
                     >arrow_forward
@@ -2217,13 +2019,13 @@
         </div>
       </div>
     </section>
-    <section class="start-project">
+    <section class="start-project position-relative">
       <div class="ft-logo-wrapper">
         <a class="stretched-link start-a-project" href="#">
-          <span class="logo lazyloaded"></span>
-          <span class="logo lazyloaded"></span>
+          <span class="logo d-block position-relative w-100"></span>
+          <span class="logo d-block position-relative w-100"></span>
         </a>
-        <div class="project-start-title">
+        <div class="project-start-title d-flex justify-content-center text-center position-absolute w-100">
           <a href="#" class="btn btn-secondary"
             >Get In Touch
             <span class="material-symbols-outlined">arrow_forward </span></a
@@ -2238,7 +2040,7 @@
     <footer>
       <div class="container">
         <div class="bdrbtm">
-          <ul class="socialicon">
+          <ul class="socialicon d-grid d-md-flex align-items-center mb-2">
             <li>
               <a href="#">
                 <img src="content/images/facebook.svg" alt="facebook" />
@@ -2299,8 +2101,8 @@
         <div class="bdrbtm dwn">
           <div class="row">
             <div class="col-6 col-md-3">
-              <div class="ftrcntnt">
-                <h3 class="ftrhead">About Inventive</h3>
+              <div class="ftrcntnt pb-3">
+                <h3 class="ftrhead m-0 mb-3">About Inventive</h3>
                 <ul class="mb-45">
                   <li>
                     <a href="#">About Us</a>
@@ -2340,8 +2142,8 @@
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="ftrcntnt">
-                <h3 class="ftrhead">Industry</h3>
+              <div class="ftrcntnt pb-3">
+                <h3 class="ftrhead m-0 mb-3">Industry</h3>
                 <ul class="mb-45">
                   <li>
                     <a href="#">Power</a>
@@ -2353,7 +2155,7 @@
                     <a href="#">Water</a>
                   </li>
                 </ul>
-                <h3 class="ftrhead">Services</h3>
+                <h3 class="ftrhead m-0 mb-3">Services</h3>
                 <ul class="mb-45">
                   <li>
                     <a href="#">Revenue Billing</a>
@@ -2383,8 +2185,8 @@
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="ftrcntnt pb-0">
-                <h3 class="ftrhead">Products</h3>
+              <div class="ftrcntnt pb-3 pb-0">
+                <h3 class="ftrhead m-0 mb-3">Products</h3>
                 <p class="prodhd">Smart Metering Solutions(SMS)</p>
                 <ul class="mb-45">
                   <li>
@@ -2418,7 +2220,7 @@
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="ftrcntnt">
+              <div class="ftrcntnt pb-3">
                 <p class="prodhd">Billing Solutions</p>
                 <ul class="mb-45">
                   <li>
@@ -2443,7 +2245,7 @@
                     <a href="#">OCR</a>
                   </li>
                 </ul>
-                <h3 class="ftrhead">Resources</h3>
+                <h3 class="ftrhead m-0 mb-3">Resources</h3>
                 <ul class="mb-45">
                   <li>
                     <a href="#">Blogs</a>
@@ -2468,16 +2270,14 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="rgtbc">
-              <ul class="lstftr">
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#">Terms of use</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="lstftr d-flex align-items-center justify-content-md-end m-0">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of use</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
