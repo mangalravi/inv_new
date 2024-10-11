@@ -1,0 +1,82 @@
+.navbar .navbar-nav > li > a, .navbar .navbar-nav > li .anchor {
+    padding-top: 1.25rem;
+    padding-bottom: 15px;
+    display: flex;
+    font-weight: 500;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #80808020;
+  }
+  .navbar-collapse{
+    padding-top:1.25rem;
+  }
+  .submenu{
+    position:inherit;
+    visibility:visible;
+    opacity: 1;
+    padding:1rem 0;
+    transform: translateX(0);
+    }
+    .hdrbtm{
+      display:none;
+    }
+    .hdrtop {
+      margin-bottom: 0;
+      padding-bottom: 1rem;
+    }
+    .submenu{
+      box-shadow: none;
+      background: transparent;
+      padding-top: 0.875rem;
+      padding-bottom:0;
+    }
+    .parent-menu.active{
+      background:#EEFBFB;
+    }
+    .navbar .navbar-nav > li{
+      padding: 0 1.25rem;
+      margin:0;
+    }
+    .navbar .container{
+      padding:0;
+    }
+    .navbar .container > a{
+      padding-left:1.25rem;
+    }
+  
+    .navbar .container button{
+      margin-right: 1.25rem;
+      border: 0;
+      padding: 0;
+    }
+    .navbar{
+      padding: 0.688rem 0;
+    }
+    .hdngdv,.hdngdv p{
+      margin-bottom:0;
+    }
+    .hdngdv p{
+      display:none;
+    }
+    .hdngdv a{
+      font-size:0.875rem;
+      font-weight:400;
+      line-height:2.275;
+    }
+    .submenu:after{
+      content:none;
+    }
+  .hvrmnu a .menu-arrow,
+  .navbar .parent-menu .menu-arrow{
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: 0;
+  }
+  .pt96 {
+    padding-top:97.33px !important;
+}
+.thumbnails .owl-item p {
+  display:none;
+  width:0;
+}

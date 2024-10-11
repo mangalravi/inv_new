@@ -1,0 +1,47 @@
+
+.theme-dark header nav{
+    background:#3c3c3c;
+  }
+  .theme-dark {
+    background:#121212 ;
+  }
+  .theme-dark .sec-head{
+    color:#3691f1;
+  }
+  .theme-dark .main-para{
+    color:#E0E0E0;
+  }
+  .theme-dark .dropdown-toggle::after {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+}
+  .theme-dark .dropdown-toggle.active::after {
+    border: solid var(--bs-secondary);
+    border-width: 0 2px 2px 0;
+}
+  .theme-dark .newprodcrd .pdbox {
+   background: #3691f1;
+  }
+
+  .theme-dark .nav-item .nav-link {
+    color:#E0E0E0;
+  }
+  .theme-dark .nav-item.dropdown .dropdown-menu .nav-link {
+    color:#000;
+  }
+  .theme-dark .nav-item .active.nav-link {
+    color: var(--bs-secondary);
+  }
+  .theme-dark .pdbox .cardpara ,
+  .theme-dark .liItem,
+  .theme-dark .newprodcrd .cardttl{
+    color:#fafafa;
+  }
+ 
+  .theme-dark .topnav button.activetheme{
+    background: #e0ffc6;
+  }
+  .theme-dark .btn-primary{
+    background: #3691f1;
+    border:1px solid #3691f1;
+  }

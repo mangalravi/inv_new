@@ -1,0 +1,25 @@
+
+
+ .sec-head{
+   font-size: calc(var(--bs-body-font-size)* 1.875);
+}
+ .thumbnails.owl-dot,.play-pause {
+    display: none;
+ }
+ section.second-section{
+    padding-top:50px;
+ }
+ .top-most-banner .maindiv h1 {
+    font-size: calc(var(--bs-body-font-size)* 2);
+ }
+ .lfttst h3{
+    font-size: calc(var(--bs-body-font-size)* 1.5);  
+      line-height: 1.875rem;
+  }
+  .client .slick-track > * {
+   min-width: 450px;
+}
+.navbar-collapse{
+   height:100vh;
+}
+.lfttst h3{
