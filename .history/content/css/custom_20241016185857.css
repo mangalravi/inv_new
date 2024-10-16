@@ -2043,7 +2043,7 @@ background-size:cover !important;
 }
 .timeline .slick-dots::after{
  right:calc(100% - 200px);
- content:"1996";
+ content:"2023";
 }
 
 .timeline .slick-dots{
