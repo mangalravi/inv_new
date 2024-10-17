@@ -191,7 +191,7 @@ color:#727381;
 }
 
   .bgsec {
-    background: #000;
+    background: #0e1726;
   }
    .dropdown-toggle::after {
     border: solid #fff;
@@ -234,3 +234,47 @@ color:#727381;
 .butn.bg-gray {
   background: #727381;
 }
+
+/* about us start */
+
+.txtimgtop{
+  background:transparent;
+  color:#fff;
+}
+.numdv span,.tst p,.tabcontent p,.valdv p,b,
+.timelinemain .timecntnt p,
+.timeline .slick-dots::before, .timeline .slick-dots::after{
+  color:#fff;
+}
+.timeline .slick-dots li button{
+  background:#fff;
+}
+.paftr,.main-para{
+  color:#fff;
+  opacity:0.7;
+}
+.maintabdv li,.maintabdv li.active{
+  border: 1px solid #010102;
+  background:#1e2222;
+}
+.grow{
+  background: url(../images/about-us/dark/about-top-bg.jpg) no-repeat;
+  background-size:cover ;
+}
+/* .imgtxt{
+  background: url(../images/about-us/dark/value-addition-bg.jpg) no-repeat;
+    background-size: cover;
+} */
+.valueadd{
+  background: url(../images/about-us/dark/value-addition-bg.jpg) no-repeat;
+   background-size:cover ;
+ }
+ .timeline{
+  background:#010102 !important;
+ }
+
+
+
+
+
+/* about us end */

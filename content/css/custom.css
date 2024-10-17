@@ -1732,8 +1732,6 @@ background:#00001059;
   padding-top: 220px;
 }
 .maintabdv{
-  display: flex;
-  padding: 0;
   min-height: 564px;
 }
 .maintabdv li{
@@ -1797,13 +1795,9 @@ background:#00001059;
   text-wrap: nowrap;
 }
 .maintabdv li .tabhead h4{
-  margin: 0;
   font-size: calc(var(--bs-body-font-size) * 2.125);
   line-height: 43.38px;
   transform: translateY(-2.5rem) rotate(-90deg);
-  display: flex;
-  text-wrap: nowrap;
-  align-items: center;
 }
 .maintabdv li.active .tabhead h4{
   transform:translate(-2.5rem,-2.5rem) rotate(-90deg);
@@ -1819,7 +1813,6 @@ background:#00001059;
   font-size: var(--bs-body-font-size);
   line-height: 20.42px;
   font-weight: 400;
-  margin-right: 1rem;
 }
 .maintabdv li .tabcontent{
   display:none;
@@ -1840,7 +1833,8 @@ background:#00001059;
   font-size: calc(var(--bs-body-font-size) * 1.5);
 }
 .grow{
-  background-size:cover !important;
+  background: url(../images/about-us/about-top-bg.jpg) no-repeat;
+  background-size:cover ;
 }
 .txtimgtop{
   font-size: 3.99rem;
@@ -1853,7 +1847,6 @@ background:#00001059;
   color: transparent;
 }
 .numdv{
-  display: flex;
   gap: 1.25rem;
 }
 .numdv img{
@@ -1888,9 +1881,6 @@ background:#00001059;
 
 .pb100{
   padding-bottom:100px;
-}
-.bfr{
-  position:relative;
 }
 .bfr > div{
   padding-top: 8.991rem;
@@ -2007,8 +1997,8 @@ margin-bottom:3.125rem;
 }
 
 .valueadd{
- 
-  background-size:cover !important;
+ background: url(../images/about-us/value-addition-bg.jpg) no-repeat;
+  background-size:cover ;
 }
 .valdv {
   max-width: 227px;
@@ -2018,7 +2008,6 @@ margin-bottom:3.125rem;
 }
 .valdv p{
   line-height: 1.5rem;
-  margin-bottom: 0;
 }
 .timeline{
 background-size:cover !important;
@@ -2144,7 +2133,6 @@ background-size:cover !important;
 }
 .timelinemain .timeimg {
 border:1px solid #1EA3DD;
-padding:1.25rem;
 min-width: 240px;
 min-height: 180px;
 display:flex;
@@ -2167,15 +2155,95 @@ justify-content: center;
   margin:0;
 }
 
-
-
-
-
-
-
-
-
 /* about us end */
+
+
+/* conatct us start */
+.contactus{
+  background:url(../images/Contact-us/contact-top-bg.jpg) no-repeat;
+  background-size:cover;
+}
+.mainform .inputbox {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.mainform .inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 0.625rem 0.75rem;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 2px solid #9fa2a8;
+ letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.mainform .inputbox label {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--bs-para-color);
+  transition: 0.5s;
+}
+.mainform .inputbox label::after {
+  position: absolute;
+  content:"*";
+ right:-0.5rem;
+ color:#bd4328;
+ font-weight:500;
+}
+
+.mainform .inputbox input:valid ~label,
+.mainform .inputbox input:focus ~label {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+.mainform .inputbox input:valid ,
+.mainform .inputbox input:focus  {
+  border-bottom: 2px solid #9fa2a8;
+}
+
+.mainform .inputbox input i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.mainform .inputbox input:valid ~i,
+.mainform .inputbox input:focus ~i {
+  height: 44px;
+  background: transparent;
+}
+.contactus .txtimgtop{
+  margin-bottom: 1.875rem;
+  background-image: url(../images/Contact-us/contact-text-bg.png) ; 
+}
+.mb90{
+  margin-bottom:90px;
+}
+.mainform h2{
+  margin-bottom:4rem;
+} 
+.contctdv{
+ display: flex;
+  align-items: self-start;
+  gap: 1rem;
+}
+
+/* conatct us end */
 
 
 
@@ -2505,7 +2573,7 @@ margin-bottom: 2rem;
 .socialcard .innercntnt {
   padding: 1.25rem;
 }
-.maintabdv li.active,.maintabdv {
+.maintabdv li.active {
   flex-direction: column;
 }
 .maintabdv li .tabhead h4,
@@ -2515,12 +2583,13 @@ margin-bottom: 2rem;
   transform:none;
 }
 .maintabdv li .tabhead {
-   max-width: 100%;
-  padding:1.5rem;
+  max-width: 100%;
+  padding: 1.5rem;
+  justify-content: start;
 }
 
 .maintabdv li.active {
-  padding: 1.5rem 1.5rem 0 1.125rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
 
 }
 .maintabdv li.active .tabhead {
