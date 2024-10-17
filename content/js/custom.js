@@ -471,97 +471,6 @@ document.querySelectorAll('.maintabdv li').forEach(function(li) {
 
 // timeline slider
 
-// jQuery(".timeline .slick-slider").slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   dots:true,
-//   infinite: false // Disable looping
-// });
-
-// jQuery(function () {
-//   const slider = jQuery(".timeline .slick-slider");
-
-//   slider.on("wheel", function (e) {
-//     e.preventDefault();
-
-//     // Get current slide index
-//     const currentSlide = slider.slick('slickCurrentSlide');
-//     const totalSlides = slider.slick('getSlick').slideCount;
-
-//     if (e.originalEvent.deltaY < 0) {
-//       // Scroll up
-//       if (currentSlide > 0) {
-//         slider.slick("slickPrev");
-//       } else {
-//         // Allow page scroll if at the first slide
-//         window.scrollBy(0, -100); // Adjust scroll amount as needed
-//       }
-//     } else {
-//       // Scroll down
-//       if (currentSlide < totalSlides - 1) {
-//         slider.slick("slickNext");
-//       } else {
-//         // Allow page scroll if at the last slide
-//         window.scrollBy(0, 100); // Adjust scroll amount as needed
-//       }
-//     }
-//   });
-// });
-
-
-
-// const $slider = $(".yeartimeslide");
-// $slider
-//     .on('init', () => {
-//         mouseWheel($slider);
-//     })
-//     .slick({
-//         vertical: true,
-//         infinite: false, 
-//         centerMode: true, 
-//         centerPadding: '20px', 
-//         slidesToShow: 1, 
-//         slidesToScroll: 1, 
-//         arrows: false,
-//     });
-
-// function mouseWheel($slider) {
-//     $(window).on('wheel', { $slider: $slider }, mouseWheelHandler);
-// }
-
-// function mouseWheelHandler(event) {
-//     event.preventDefault();
-//     const $slider = event.data.$slider;
-
-//     // Get the current slide index and total slides
-//     const currentSlide = $slider.slick('slickCurrentSlide');
-//     const totalSlides = $slider.slick('getSlick').slideCount;
-//     const delta = event.originalEvent.deltaY;
-
-//     if (delta > 0) {
-//         // Scroll down
-//         if (currentSlide < totalSlides - 1) {
-//             $slider.slick('slickNext');
-//         } else {
-//             // If at the last slide, allow the page to scroll down
-//             window.scrollBy(0, 100); // Adjust scroll amount as needed
-//         }
-//     } else {
-//         // Scroll up
-//         if (currentSlide > 0) {
-//             $slider.slick('slickPrev');
-//         } else {
-//             // If at the first slide, allow the page to scroll up
-//             window.scrollBy(0, -100); // Adjust scroll amount as needed
-//         }
-//     }
-// }
-
-
-
-
-
 
 jQuery(function () {
   const $slider1 = jQuery(".timeline .slick-slider");
@@ -573,6 +482,8 @@ jQuery(function () {
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    // fade: true,
+    // cssEase: 'linear',
     infinite: false // Disable looping
   });
 
@@ -615,12 +526,22 @@ jQuery(function () {
         syncSlides(currentSlide - 1);
       } else {
         // Allow page scroll if at the first slide
-        window.scrollBy(0, -100); // Adjust scroll amount as needed
+        window.scrollBy(0, -100);
       }
     }
   }
 
-  // Attach the wheel event handler to both sliders
   $slider1.on('wheel', handleWheel);
   $slider2.on('wheel', handleWheel);
+});
+
+
+$(document).ready(function() {
+  $('.yeartimeslide').on('afterChange', function(event, slick, currentSlide) {
+    if (currentSlide >= 4) {
+        $('.rgthd').addClass('changed');
+    } else {
+        $('.rgthd').removeClass('changed');
+    }
+});
 });

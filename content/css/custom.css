@@ -1741,13 +1741,13 @@ background:#00001059;
  height:auto;
  padding:0;
  padding-top: 50px;
- background: linear-gradient(180deg, #F5F9FC 0%, #C9ECFE 100%);
- border: 1px solid #A0DDFF;
+ background: linear-gradient(180deg, #FFFFFF 0%, #E4E4E7 100%);
+ border: 1px solid #D7D7DB;
 }
 .maintabdv li.active{
   overflow:hidden;
   box-shadow: 0px 4px 16px 0px #464C881A;
-  border: 1px solid #A0DDFF;
+  border: 1px solid #D7D7DB;
   background: #fff;
   padding: 50px 50px 0 40px;
   display: flex;
@@ -1760,7 +1760,7 @@ background:#00001059;
   width: 100%;
   min-width: 123px;
   max-width: 123px;
-  /* min-height: 300px; */
+ cursor:pointer;
   align-items: end;
   justify-content: center;
   flex: 1;
@@ -1768,6 +1768,7 @@ background:#00001059;
 }
 .maintabdv li.active .tabhead{
   min-width: 40px;
+  justify-content:start;
 }
 .imgtxt {
   font-size: 283px;
@@ -1790,8 +1791,10 @@ background:#00001059;
   font-size: 256px;
 }
 .imgtxt.thrd{
-  font-size: 103px;
-  bottom: -0.5rem;
+  font-size: 256px;
+  bottom: 0;
+  line-height: 1;
+  text-wrap: nowrap;
 }
 .maintabdv li .tabhead h4{
   margin: 0;
@@ -1802,8 +1805,14 @@ background:#00001059;
   text-wrap: nowrap;
   align-items: center;
 }
+.maintabdv li.active .tabhead h4{
+  transform:translate(-2.5rem,-2.5rem) rotate(-90deg);
+}
 .maintabdv li:last-child .tabhead h4 {
-  transform: translateY(-7rem) rotate(-90deg);
+  transform: translate(0, -6.5rem) rotate(-90deg);
+}
+.maintabdv li.active:last-child .tabhead h4 {
+  transform: translate(-6.5rem, -6.5rem) rotate(-90deg);
 }
 .tabhead span{
   font-size: 1rem;
@@ -1814,10 +1823,16 @@ background:#00001059;
 }
 .maintabdv li .tabcontent{
   display:none;
+  opacity:0;
+  visibility: hidden;
+  width:0;
   transition:all 0.7s;
 }
 .maintabdv li.active .tabcontent{
   display: block;
+  opacity:1;
+  visibility: visible;
+  width:100%;
   transition: all 0.7s;
 }
 .tabcontent p{
@@ -1888,7 +1903,7 @@ background:#00001059;
     height:100%;
     width:2.71px;
    background: linear-gradient(180deg, #393185 0%, #E4097F 79.35%);
-   animation:fstbfr 2s ease-in-out forwards;
+   animation:fstbfr 2s ease-in-out forwards;  
 }
 
 .bfr::after{
@@ -1995,6 +2010,9 @@ margin-bottom:3.125rem;
  
   background-size:cover !important;
 }
+.valdv {
+  max-width: 227px;
+}
 .valdv img{
   margin-bottom: 1.375rem;
 }
@@ -2038,12 +2056,12 @@ background-size:cover !important;
  transform: translateY(-50%);
 }
 .timeline .slick-dots::before{
- content:"2023";
- left:calc(100% - 200px);
+ content:"1996";
+ left:0;
 }
 .timeline .slick-dots::after{
- right:calc(100% - 200px);
- content:"1996";
+ right:0;
+ content:"2024";
 }
 
 .timeline .slick-dots{
@@ -2087,10 +2105,67 @@ background-size:cover !important;
 .yeartimeslide .slick-slide.slick-current p{
    color: var(--bs-heading-color);
 }
+.rgthd .twenty,
+.rgthd.changed .ninghty {
+  opacity: 0;
+  visibility: hidden; 
+  display:none;
+  transition: opacity 0.7s ease, visibility 0s 0.7s; 
+}
+
+.rgthd.changed .twenty,
+.rgthd .ninghty {
+  opacity: 1;
+  visibility: visible;
+  display:block;
+  transition: opacity 0.7s ease, visibility 0s; 
+}
 
 
-
-
+.rgtyear {
+  position:relative
+}
+.rgtyear .rgthd{
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  transform: translate(0, -46%);
+}
+.rgtyear .rgthd h2{
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.375rem;
+  font-weight: 700;
+  margin: 0;
+}
+.timelinemain {
+  display: flex;
+  gap: 50px;
+}
+.timelinemain .timeimg {
+border:1px solid #1EA3DD;
+padding:1.25rem;
+min-width: 240px;
+min-height: 180px;
+display:flex;
+align-items:center;
+justify-content: center;
+}
+.timelinemain .timeimg img{
+  object-fit: contain;
+}
+.timelinemain .timecntnt h4{
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  line-height: 1.875rem;
+  letter-spacing: 1px;
+}
+.timelinemain .timecntnt p{
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+  margin:0;
+}
 
 
 
@@ -2105,22 +2180,40 @@ background-size:cover !important;
 
 
 
-@media(width < 575px ) {
-  footer .socialicon li a img {
-    height: 2rem;
-    width: 2rem;
+@media(width < 425px ) {
+  .maintabdv li.active {
+    min-height: 750px;
+    gap: 0;
 }
-.bdrbtm {
- justify-content: center;
-  display: flex;
+.tabcontent p {
+  line-height: 1.875rem;
+  font-size: var(--bs-body-font-size);
 }
 }
 @media(width < 767px ) {
   .socdtl{
     display:none;
   }
+  .timeline .slick-dots li.slick-active button{
+    width:40px;
+    height:40px;
+  }
+ 
+.timelinemain {
+ flex-direction: column;
+}
+.maintabdv li.active {
+  min-height: 675px;
+  gap:0;
+}
+.timeline .slick-dots {
+ gap: 1rem;
+}
+
+}
+@media(width < 992px){
   .bfr > div {
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 .tst p {
   font-size: 1rem;
@@ -2152,8 +2245,6 @@ background-size:cover !important;
      width:38px;
   }
 }
-}
-@media(width < 992px){
   .thumbnails{
     justify-content: start;
     gap:2rem;
@@ -2169,6 +2260,9 @@ background-size:cover !important;
     justify-content: space-between;
     border-bottom: 1px solid #80808020;
   }
+  .mb66 {
+    margin-bottom: 33px;
+}
   .close{
     display:none;
   }
@@ -2411,7 +2505,41 @@ margin-bottom: 2rem;
 .socialcard .innercntnt {
   padding: 1.25rem;
 }
+.maintabdv li.active,.maintabdv {
+  flex-direction: column;
+}
+.maintabdv li .tabhead h4,
+.maintabdv li:last-child .tabhead h4,
+.maintabdv li.active:last-child .tabhead h4,
+.maintabdv li.active .tabhead h4{
+  transform:none;
+}
+.maintabdv li .tabhead {
+   max-width: 100%;
+  padding:1.5rem;
+}
 
+.maintabdv li.active {
+  padding: 1.5rem 1.5rem 0 1.125rem;
+
+}
+.maintabdv li.active .tabhead {
+  max-height: 55px;
+        padding: 0;
+        align-items: baseline;
+}
+.imgtxt{
+  left:-0.5rem;
+}
+.maintabdv li{
+  padding-top:0;
+}
+}
+@media(426px < width < 991px){
+  .tabcontent p {
+    line-height: 2rem;
+    font-size: calc(var(--bs-body-font-size)* 1.25);
+  }
 }
 @media(992px < width){
   .offcanvas,.offcanvas-backdrop.show{
@@ -2434,7 +2562,7 @@ min-width:auto;
 /* about us  start*/
 
 .pttop {
-  padding-top: 168px;
+  padding-top: 135px;
 }
 .txtimgtop {
   font-size: 3rem;

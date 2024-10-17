@@ -69,4 +69,15 @@ footer {
   .client .slick-track > * {
    min-width: 150px;
 }
-
+/* .imgtxt.thrd{
+    font-size: 103px;
+    bottom: -0.5rem;
+  } */
+  footer .socialicon li a img {
+    height: 2rem;
+    width: 2rem;
+}
+.bdrbtm {
+ justify-content: center;
+  display: flex;
+}
