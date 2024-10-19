@@ -80,24 +80,25 @@ body{
         bottom: 1rem;
         right: 1rem;
         width: 400px;
+        border-radius: 0.5rem;
         background-color: #2B2B2B;
         padding: 2.5rem 1.5rem;
         display: none;
         z-index: 1000;
       }
       .cookieConsent button {
-        background-color: #0079C1;
+        background-color: var(--bs-heading-color);
         color: #fff;
         border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        display: block;
+        padding: 0.625rem 1rem;
+        border-radius: 0.5rem;
+        line-height: 1.366rem;
         width: 100%;
-        font-size: calc(var(--bs-body-font-size) * 0.9);
+        font-size: calc(var(--bs-body-font-size) * 0.875);
       }
      
       .cookieConsent p {
-        color: #fff;
+        color: #b4b4b5;
       font-size: calc(var(--bs-body-font-size) * 0.875);
         line-height: 1.6;
       }
@@ -1000,6 +1001,7 @@ margin-left:0.25rem;
 section.digital{
     background: url(../images/demo-bg.jpg) no-repeat;
   background-position: right center !important;
+  background-size:cover !important;
   transition:all 0.7s;
 }
 section.digital:hover{
@@ -1871,6 +1873,10 @@ background:#00001059;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin:0;
+}
+.mb70{
+  margin-bottom:70px;
 }
 .numdv{
   gap: 1.25rem;
@@ -2209,6 +2215,9 @@ justify-content: center;
 .mb90{
   margin-bottom:90px;
 }
+.mb145{
+ margin-bottom: 145px;
+}
 .mainform h2{
   margin-bottom: 4rem;
   font-size: 2.25rem;
@@ -2257,7 +2266,7 @@ gap: 1rem;
 }
 
 .mainform .input-container input {
-  font-size: 20px;
+  font-size: 1.5rem;
   width: 100%;
   border: none;
   border-bottom: 2px solid #9fa2a8;
@@ -2268,7 +2277,9 @@ gap: 1rem;
 .mainform .input-container input.Message {
   padding-bottom: 5rem;
 }
-
+.darkquote{
+  display:none;
+}
 .mainform .input-container .label {
   position: absolute;
   top: 0;
@@ -2281,9 +2292,7 @@ gap: 1rem;
 }
 
 .mainform .input-container input:focus ~ .label,
-.mainform .input-container .label:focus,
-.mainform .input-container input:valid ~ .label,
-.mainform .input-container .label:valid {
+.mainform .input-container input:valid ~ .label {
   top: -38px;
   font-size: 1.125rem;
   color: var(--bs-para-color);
@@ -2341,7 +2350,12 @@ gap: 1rem;
 .mb90 {
   margin-bottom: 45px;
 }
-
+.mb145{
+  margin-bottom: 72px;
+ }
+ .mb70{
+  margin-bottom:35px;
+}
 .mainform .input-container {
   margin-bottom: 3rem;
 }
@@ -2760,7 +2774,10 @@ min-width:auto;
 /* about us  end*/
 }
 @media(992px < width < 1199px){
-  .submenu,.thumbnails{
+  .submenu{
+    max-width:936px;
+  }
+  .thumbnails{
     max-width:960px;
   }
   footer .socialicon {
@@ -2768,12 +2785,18 @@ min-width:auto;
 }
 }
 @media(1200px < width < 1399px){
-  .submenu,.thumbnails{
+  .submenu{
     max-width:1140px;
+  }
+  .thumbnails{
+    max-width:1116px;
   }
 }
 @media(1400px < width){
-  .submenu,.thumbnails{
+  .submenu{
     max-width:1320px;
+  }
+  .thumbnails{
+    max-width:1296px;
   }
 }

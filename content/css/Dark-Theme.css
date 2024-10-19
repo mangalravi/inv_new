@@ -29,11 +29,12 @@
 .top-most-banner .owl-item.active .circle{
   stroke:var(--bs-heading-color);
 }
-.top-most-banner .owl-dot, .slider-nav .slick-list {
-  background: #3c3c3c;
-}
+
 .play-pause img {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(107deg) brightness(104%) contrast(104%);
+}
+.cookieConsent button {
+  color:#091638;
 }
  .submenu {
   background:linear-gradient(97.03deg, rgb(60 60 60) 5.33%, #000000 102.02%);
@@ -55,7 +56,8 @@ background-color:#1E2222 !important;
   }
   section.digital{
     background: url(../images/demo-bg-dark.jpg) no-repeat;
-  background-position: right center !important;
+    background-position: right center !important;
+    background-size:cover !important;
   }
   .insidesec {
     background: url(../images/testimonial-bg-dark.jpg) no-repeat;
@@ -260,7 +262,21 @@ color:#727381;
   color:#fff;
 }
 .timeline .slick-dots li button{
+  background:#676767;
+}
+.darkquote{
+  display:block;
+  transition: all 0.7s;
+}
+.client .slick-initialized .slick-slide{
   background:#fff;
+}
+.client .slick-slide img{
+  filter:grayscale(80%);
+}
+.lightquote{
+  display:none;
+  transition: all 0.7s;
 }
 .paftr,.main-para{
   color:#fff;
