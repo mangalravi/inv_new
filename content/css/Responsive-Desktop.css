@@ -325,9 +325,6 @@ margin-bottom:1rem;
     margin-bottom: 0;
     padding-bottom: 1rem;
   }
-  .navbar .navbar-nav > li:hover {
-    border-bottom: 1.25px solid transparent;
-}
 .navbar .navbar-nav > li:hover > a {
   color: var(--bs-heading-color);
 }
@@ -491,6 +488,12 @@ min-width:auto;
 }
 .bgsec .container{
 padding:0 20px;
+}
+.navbar .navbar-nav > li:hover > a:after {
+  width: 100%;
+  left: 0;
+  transform: none;
+  height:1px;
 }
 @keyframes lstaftr{
   0%{
