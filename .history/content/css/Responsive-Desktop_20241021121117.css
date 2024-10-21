@@ -1,0 +1,156 @@
+header ul.d-flex{
+     gap:0.75rem;
+ } 
+ .main-para{
+    font-size: var(--font-size-main-para);
+    text-align: left;
+}
+
+footer .socialicon li a img {
+  height: auto;
+  width: auto;
+}
+ section{
+    padding:60px 0;
+}
+footer .socialicon {
+    display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+}
+.sec-head{
+    font-size: calc(var(--bs-body-font-size)* 1.5);
+}
+.insidesec{
+    padding: 50px 20px 100px;
+    padding-bottom: 85px;
+ }
+.mb50{
+    margin-bottom:2rem;
+}
+ 
+ .thumbnails.owl-dot,.play-pause {
+    display: none;
+ }
+ section.second-section{
+    padding-top:50px;
+ }
+ .top-most-banner .maindiv h1 {
+    font-size: calc(var(--bs-body-font-size)* 2);
+        margin-bottom: 1.5rem;
+ }
+ .lfttst h3{
+    line-height: 1.875rem;
+    font-size: calc(var(--bs-body-font-size)* 1.5);
+        margin-bottom: 1.5rem;
+  }
+  .start-project a .logo:nth-child(1),
+  .start-project a .logo:nth-child(2){
+    animation-play-state:running;
+  }
+  footer ul.lstftr {
+    justify-content: start;
+  }
+  .client .slick-track > * {
+    min-width: 300px;
+ }
+
+
+
+  .navbar-nav:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, #5E12C9 0%, #2154FE 11.8%, #FD25FE 44.5%, #2390FD 71%, #EE0CE3 95%);
+    z-index: -1; 
+  }
+  .contctcntnt h4 {
+    font-size: 1.15rem;
+}
+
+.timeline .slick-dots li.slick-active button{
+  width:40px;
+  height:40px;
+}
+
+.contctcntnt p {
+font-size: 0.9rem;
+}
+.contctdv a {
+font-size: 1rem;
+}
+.mb90 {
+margin-bottom: 45px;
+}
+.mb145{
+margin-bottom: 72px;
+}
+.mb70{
+margin-bottom:35px;
+}
+.mainform .input-container {
+margin-bottom: 3rem;
+}
+
+.mainform .input-container input {
+border-bottom: 1px solid #9fa2a8;
+}
+.mainform .input-container .underline {
+height: 1px;
+}
+.mainform .input-container input:focus ~ .label,
+.mainform .input-container input:valid ~ .label {
+top: -1.5rem;
+font-size: 0.875rem;
+}
+.timelinemain {
+flex-direction: column;
+}
+.maintabdv li.active {
+min-height: 480px;
+gap:0;
+}
+.timeline .slick-dots {
+gap: 1rem;
+}
+.mainform .input-container input.Message {
+padding-bottom: 2rem;
+}
+.mainform .input-container .label {
+ font-size: 1rem;
+}
+.tabcontent p {
+  line-height: 1.875rem;
+  font-size: var(--bs-body-font-size);
+}
+.maintabdv li .tabcontent{
+  padding:0;
+}
+.bfr::before,.bfr::after {
+  left: 10px;
+}
+.rgtyear .rgthd h2 ,
+.yeartimeslide .slick-slide p{
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.rgtyear .rgthd {
+  right: 75px;
+}
+.numdv h2,.numdv span:first-child{
+  font-size: 2.375rem;
+}
+.numdv span:first-child{
+  line-height: 0;
+}
+@keyframes lstaftr{
+  0%{
+    width:0;
+  }
+  100%{
+     width:40px;
+  }
+}

@@ -1,0 +1,21 @@
+.client .slick-track > * {
+    min-width: 225px;
+ }
+ .timeline .slick-dots {
+    gap: 3rem;
+   }
+   .txtimgtop {
+      font-size: 3rem;
+      line-height: 3rem;
+      margin-bottom:1rem;
+    }
+    .top-most-banner .owl-dot {
+      padding-right: 4.5rem;
+  }
+  .thumbnails .owl-item {
+  min-width:auto;
+  }
+  .bgsec .container{
+    padding:0 20px;
+  }
+  

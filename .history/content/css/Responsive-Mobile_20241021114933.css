@@ -1,0 +1,156 @@
+ 
+
+.main-para{
+    font-size: var(--bs-body-font-size);
+}
+section,.start-project{
+    padding:50px 0;
+}
+footer .socialicon {
+    max-width: 300px;
+}
+footer .socialicon {
+    gap: 1.25rem;
+}
+.insidesec {
+     padding: 50px 20px 100px;
+}
+.rgttst {
+    padding: 2rem;
+}
+.rgttst p {
+    font-size: calc(var(--bs-body-font-size)* 0.875);
+}
+.rgttst img:last-child {
+    width: 42px !important;
+    height: 42px;
+}
+
+.thumbnails.owl-dot,.play-pause {
+    display: none;
+ }
+ section.second-section{
+    padding-top:50px;
+ }
+ .sec-head {
+    font-size: calc(var(--bs-body-font-size)* 1.5);
+    margin-bottom: 1rem;
+    line-height: 30px;
+ }
+ h2 + a {
+ min-width: 78px;
+}
+ h2 + a::after:hover {
+ width: 75%;
+ transition: all 0.7s;
+}
+
+footer {
+    padding-top: 50px;
+}
+.top-most-banner .maindiv h1 {
+    font-size: calc(var(--bs-body-font-size)* 2);
+ }
+ .top-most-banner .maindiv h1 + p{
+    font-size: var(--bs-body-font-size);
+ }
+ .lfttst h3{
+    font-size: calc(var(--bs-body-font-size)* 1.5);  
+      line-height: 1.875rem;
+          margin-bottom: 1.5rem;
+  }
+  .start-project a .logo:nth-child(1),
+  .start-project a .logo:nth-child(2){
+    animation-play-state:running;
+  }
+  .mb50 {
+    margin-bottom: 1.5rem;
+  }
+  .client .slick-track > * {
+   min-width: 150px;
+}
+/* .imgtxt.thrd{
+    font-size: 103px;
+    bottom: -0.5rem;
+  } */
+  footer .socialicon li a img {
+    height: 2rem;
+    width: 2rem;
+}
+.bdrbtm {
+ justify-content: center;
+  display: flex;
+}
+.cookieConsent {
+    bottom: 0.75rem;
+    left: 50%;
+    border-radius: 0.5rem;
+    transform: translateX(-50%);
+    right: 0;
+    width: 95%;
+}
+.cookieConsent p{
+    text-align:center;
+}
+.contctcntnt h4 {
+    font-size: 1.15rem;
+}
+
+.timeline .slick-dots li.slick-active button{
+    width:40px;
+    height:40px;
+  }
+ 
+.contctcntnt p {
+  font-size: 0.9rem;
+}
+.contctdv a {
+  font-size: 1rem;
+}
+.mb90 {
+  margin-bottom: 45px;
+}
+.mb145{
+  margin-bottom: 72px;
+ }
+ .mb70{
+  margin-bottom:35px;
+}
+.mainform .input-container {
+  margin-bottom: 3rem;
+}
+
+.mainform .input-container input {
+  border-bottom: 1px solid #9fa2a8;
+}
+.mainform .input-container .underline {
+  height: 1px;
+}
+.mainform .input-container input:focus ~ .label,
+ .mainform .input-container input:valid ~ .label {
+  top: -1.5rem;
+  font-size: 0.875rem;
+}
+.timelinemain {
+ flex-direction: column;
+}
+.maintabdv li.active {
+  min-height: 440px;
+  gap:0;
+}
+.timeline .slick-dots {
+ gap: 1rem;
+}
+.mainform .input-container input.Message {
+  padding-bottom: 2rem;
+}
+.mainform .input-container .label {
+    font-size: 1rem;
+   }
+   .tabcontent p {
+    line-height: 1.875rem;
+    font-size: var(--bs-body-font-size);
+  }
+  .maintabdv li .tabcontent{
+    padding:0;
+  }
