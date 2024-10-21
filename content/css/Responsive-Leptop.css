@@ -1,4 +1,3 @@
-
 section{
    padding:90px 0;
 }
@@ -21,7 +20,6 @@ section{
   .client .slick-track > * {
    min-width: 300px;
 }
-
  .navbar-nav:after{
    content: '';
    position: absolute;
@@ -35,7 +33,6 @@ section{
  .rgttst p {
    min-height: 120px;
 }  
-
 .maintabdv li.active {
    padding: 1.5rem 1.5rem 0 2.25rem;
    gap: 0;
@@ -83,9 +80,6 @@ section{
  .bfr > div {
    padding-top: 3rem;
 }
-
-/*  */
-
 .ps-100 {
    padding-left: 46px;
 }
@@ -102,8 +96,6 @@ section{
  .socdtl{
    display:none;
  }
-
- 
 .tst p {
  line-height: 1.875rem;
  font-size: 1.25rem;
@@ -117,12 +109,9 @@ section{
 .tst img {
  margin-bottom: 1.5rem;
 }
-
-
 .bfr::after {
 left: 42px;
 }
-
 @keyframes lstaftr{
  0%{
    width:0;
@@ -146,7 +135,6 @@ left: 42px;
    justify-content: space-between;
    border-bottom: 1px solid #80808020;
  }
-
  .close{
    display:none;
  }
@@ -162,13 +150,10 @@ left: 42px;
 .selected .btndv button{
  border:none;
 }
-
 .offcanvas .offcanvas-body{
  position: relative;
- /* height: 100%; */
  height: calc(100vh - 78px);
 }
-
 .offcanvas-body .accttl{
 font-size: 1rem;
  margin-bottom: 2rem;
@@ -236,7 +221,6 @@ color:var(--bs-heading-color);
    background: linear-gradient(90deg, #5E12C9 0%, #2154FE 11.8%, #FD25FE 44.5%, #2390FD 71%, #EE0CE3 95%);
    z-index: 2;
  }
-
  .submenu{
    position:inherit;
    visibility:visible;
@@ -390,7 +374,6 @@ margin-bottom: 2rem;
 .socialcard .innercntnt {
  padding: 1.25rem;
 }
-
 .maintabdv li .tabhead h4,
 .maintabdv li:last-child .tabhead h4,
 .maintabdv li.active:last-child .tabhead h4,
@@ -401,8 +384,6 @@ margin-bottom: 2rem;
  max-width: 100%;
  padding: 1.5rem;
 }
-
-
 .maintabdv li.active .tabhead {
         max-height: 55px;
        padding: 0;
