@@ -312,6 +312,9 @@ color:#fff;
 .mainform .input-container input{
   color:#fff;
 }
+.second-section .top-img h3.darkwht{
+  color:#fff !important;
+}
 /* contact us end */
 @media(992px < width){
   header.nvbrhdr.bg-white nav {
