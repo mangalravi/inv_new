@@ -61,7 +61,7 @@ section{
    margin-bottom: 33px;
 }
 .txtimgtop {
-   font-size: 3rem;
+  font-size: calc(var(--bs-body-font-size) * 3);
    line-height: 3rem;
    margin-bottom:1rem;
  }
@@ -90,7 +90,7 @@ section{
 }
  .mainform h2 {
    margin-bottom: 4rem;
-   font-size: 1.75rem;
+   font-size: calc(var(--bs-body-font-size) * 1.75);
    line-height: 40px;
  }
  .socdtl{
@@ -98,7 +98,7 @@ section{
  }
 .tst p {
  line-height: 1.875rem;
- font-size: 1.25rem;
+ font-size: calc(var(--bs-body-font-size) * 1.25);
 }
 .tst {
  padding: 2rem;
@@ -130,7 +130,7 @@ left: 42px;
    margin-bottom: 1.25rem;
    display: flex;
    font-weight: 500;
-   font-size: 1rem;
+   font-size: var(--bs-body-font-size);
    align-items: center;
    justify-content: space-between;
    border-bottom: 1px solid #80808020;
@@ -139,7 +139,7 @@ left: 42px;
    display:none;
  }
  .navbar .navbar-nav.lstul > li > a {
-   font-size: 0.875rem;
+  font-size: calc(var(--bs-body-font-size) * 0.875);
  }
 .gx24{
  gap:1.5rem;
@@ -155,7 +155,7 @@ left: 42px;
  height: calc(100vh - 78px);
 }
 .offcanvas-body .accttl{
-font-size: 1rem;
+  font-size: var(--bs-body-font-size) ;
  margin-bottom: 2rem;
 }
 .offcanvas-body .accordion-item,
@@ -185,7 +185,7 @@ section > .container,footer > .container {
 }
 .innoffcan li{
 list-style:none;
-font-size:0.875rem;
+font-size: calc(var(--bs-body-font-size) * 0.875);
 line-height:2.25;
 }
 .innoffcan li a{
@@ -198,9 +198,10 @@ color:var(--bs-heading-color);
  border-bottom: 1px solid #80808020;
 }
 .innoffcan ul.noacc li a{
- font-weight: 500;
- font-size: 1rem;
- line-height: 1.25;
+  font-weight: 500;
+  display:block;
+  font-size: var(--bs-body-font-size);
+  line-height: 1.25;
 }
 .innoffcan .accordion-flush>.accordion-item:last-child{
  border-bottom:1px solid #80808020;
@@ -273,7 +274,7 @@ transition: all 0.5s ease-in-out;
      display:none;
    }
    .hdngdv a{
-     font-size:0.875rem;
+    font-size: calc(var(--bs-body-font-size) * 0.875);
      font-weight:400;
      line-height:2.275;
    }

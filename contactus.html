@@ -26,11 +26,11 @@
           <div
             class="topnav d-flex align-items-center justify-content-end position-relative text-center text-white p-0"
           >
-            <a href="contactus.html" class="btn-top">
+            <a href="contactus.html" class="btn-top d-flex align-items-center">
               <img src="content/images/contact-us.svg" alt="contact" /> Contact
               Us
             </a>
-            <a href="#" class="btn-top">
+            <a href="#" class="btn-top d-flex align-items-center">
               <img src="content/images/badge.svg" alt="badge" /> Employee Login
             </a>
             <div class="tpnv">
@@ -41,13 +41,13 @@
                 <ul class="selected position-absolute">
                   <li>
                     <div class="btndv d-flex flex-column">
-                      <button type="button" class="incbtn">
+                      <button type="button" class="incbtn p-0">
                         <img src="content/images/A+.svg" alt="" />
                       </button>
-                      <button type="button" class="regbtn">
+                      <button type="button" class="regbtn p-0">
                         <img src="content/images/reset-font-size.svg" alt="" />
                       </button>
-                      <button type="button" class="decbtn">
+                      <button type="button" class="decbtn p-0">
                         <img src="content/images/desctxt.svg" alt="" />
                       </button>
                     </div>
@@ -1421,15 +1421,17 @@
 
     <!-- Cookie Consent Banner -->
     <div id="overlay" class="overlay"></div>
-    <div id="cookieConsent" class="cookieConsent">
+    <div id="cookieConsent" class="cookieConsent position-fixed">
       <p>
         By clicking "Accept All Cookies", you agree to the storing of cookies on
         your device to enhance site navigation, analyze site usage, and assist
         in our marketing efforts. Accept All Cookies Reject All Cookies Settings
       </p>
-      <button class="mb-3" onclick="acceptCookies()">Accept All Cookie</button>
-      <button class="mb-4" onclick="rejectCookies()">Reject All</button>
-      <a href="#">Cookies Settings</a>
+      <div class="d-flex">
+      <button class="mb-md-3 w-100 border-0" onclick="acceptCookies()">Accept All Cookie</button>
+      <button class="mb-md-3 ms-2 w-100 border-0" onclick="rejectCookies()">Reject All</button>
+    </div>
+    <a href="#" class="fw-bold text-decoration-underline text-center">Cookies Settings</a>
     </div>
     <script src="content/js/jquery.min.js"></script>
     <script

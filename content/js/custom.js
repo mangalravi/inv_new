@@ -15,9 +15,7 @@ $(document).ready(function () {
   $(".regbtn").on("click", function () {
     resetRootFontSize();
   });
- 
- 
-});
+ });
 const sizeChangePercentage = 0.08;
 const minFontSize = 13.54;
 const maxFontSize = 18.66;
@@ -58,93 +56,6 @@ function applyStoredFontSize() {
     );
   }
 }
-
-
-// $(document).ready(function () {
-//   checkCookieConsent();
-//   applyStoredTheme();
-//   applyStoredFontSize();
-//   handleResponsiveStyles();
-  
-//   // Call handleResponsiveStyles once to initialize buttons
-//   handleResponsiveStyles();
-
-//   $(window).on("resize", function () {
-//     handleResponsiveStyles();
-//   });
-
-//   $(".incbtn").on("click", function () {
-//     adjustRootFontSize(1.08);
-//   });
-
-//   $(".decbtn").on("click", function () {
-//     adjustRootFontSize(1 / 1.08);
-//   });
-
-//   $(".regbtn").on("click", function () {
-//     resetRootFontSize();
-//   });
-// });
-
-// const sizeChangePercentage = 0.08;
-// const minFontSize = 13.54;
-// const maxFontSize = 18.66;
-
-// function getRootFontSize() {
-//   const fontSize = getComputedStyle(document.documentElement).getPropertyValue(
-//     "--bs-body-font-size"
-//   );
-//   return parseFloat(fontSize);
-// }
-
-// function adjustRootFontSize(factor) {
-//   let rootFontSize = getRootFontSize();
-//   rootFontSize *= factor;
-//   // Ensure the font size is within min and max bounds
-//   rootFontSize = Math.max(minFontSize, Math.min(maxFontSize, rootFontSize));
-//   document.documentElement.style.setProperty(
-//     "--bs-body-font-size",
-//     `${rootFontSize}px`
-//   );
-//   storeRootFontSize(rootFontSize);
-// }
-
-// function resetRootFontSize() {
-//   const defaultFontSize = 16; // Default font size in pixels
-//   document.documentElement.style.setProperty(
-//     "--bs-body-font-size",
-//     `${defaultFontSize}px`
-//   );
-//   storeRootFontSize(defaultFontSize);
-// }
-
-// function storeRootFontSize(size) {
-//   localStorage.setItem("rootFontSize", size);
-// }
-
-// function applyStoredFontSize() {
-//   const storedSize = localStorage.getItem("rootFontSize");
-//   if (storedSize) {
-//     document.documentElement.style.setProperty(
-//       "--bs-body-font-size",
-//       `${storedSize}px`
-//     );
-//   }
-// }
-
-// function handleResponsiveStyles() {
-//   if ($(window).width() < 992) {
-//     // Disable buttons if the screen width is less than 992px
-//     $(".incbtn, .decbtn, .regbtn").prop("disabled", true);
-//     $("#incbtn, .decbtn, .regbtn").css("opacity", "0.5"); // Make buttons look disabled
-//   } else {
-//     // Enable buttons if the screen width is 992px or greater
-//     $(".incbtn, .decbtn, .regbtn").prop("disabled", false);
-//     $(".incbtn, .decbtn, .regbtn").css("opacity", "1"); // Restore button opacity
-//   }
-// }
-
-
 
 $(document).ready(function () {
   // Check for saved theme in cookies, otherwise set default to light
@@ -187,10 +98,6 @@ function getCookie(name) {
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(';').shift();
 }
-
-
-
-
 
 function acceptCookies() {
   $("#cookieConsent").hide();
@@ -420,13 +327,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
-
-
-
 document.querySelectorAll('.maintabdv li').forEach(function(li) {
   li.addEventListener('click', function() {
       // Remove 'active' class from all li elements
@@ -438,9 +338,7 @@ document.querySelectorAll('.maintabdv li').forEach(function(li) {
   });
 });
 
-
 // counter number
-
 
     document.addEventListener("DOMContentLoaded", function() {
         const counters = document.querySelectorAll('.counter');
@@ -464,9 +362,6 @@ document.querySelectorAll('.maintabdv li').forEach(function(li) {
             updateCount();
         });
     });
-
-
-
 
 
 // timeline slider

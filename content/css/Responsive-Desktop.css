@@ -1,5 +1,5 @@
  .main-para{
-    font-size: var(--font-size-main-para);
+    font-size: var(--bs-body-font-size);
     text-align: left;
 }
 footer .socialicon li a img {
@@ -59,17 +59,17 @@ footer .socialicon {
     z-index: -1; 
   }
   .contctcntnt h4 {
-    font-size: 1.15rem;
+    font-size: calc(var(--bs-body-font-size) * 1.15);
 }
 .timeline .slick-dots li.slick-active button{
   width:40px;
   height:40px;
 }
 .contctcntnt p {
-font-size: 0.9rem;
+  font-size: calc(var(--bs-body-font-size) * 0.9);
 }
 .contctdv a {
-font-size: 1rem;
+  font-size: var(--bs-body-font-size);
 }
 .mb90 {
 margin-bottom: 45px;
@@ -92,7 +92,7 @@ height: 1px;
 .mainform .input-container input:focus ~ .label,
 .mainform .input-container input:valid ~ .label {
 top: -1.5rem;
-font-size: 0.875rem;
+font-size: calc(var(--bs-body-font-size) * 0.875);
 }
 .timelinemain {
 flex-direction: column;
@@ -108,7 +108,7 @@ gap: 1rem;
 padding-bottom: 2rem;
 }
 .mainform .input-container .label {
- font-size: 1rem;
+  font-size: var(--bs-body-font-size);
 }
 .tabcontent p {
   line-height: 1.875rem;
@@ -122,14 +122,14 @@ padding-bottom: 2rem;
 }
 .rgtyear .rgthd h2 ,
 .yeartimeslide .slick-slide p{
-  font-size: 3rem;
+  font-size: calc(var(--bs-body-font-size) * 3);
   line-height: 3rem;
 }
 .rgtyear .rgthd {
   right: 75px;
 }
 .numdv h2,.numdv span:first-child{
-  font-size: 2.375rem;
+  font-size: calc(var(--bs-body-font-size) * 2.375);
 }
 .numdv span:first-child{
   line-height: 0;
@@ -148,7 +148,7 @@ padding-bottom: 2rem;
   margin-bottom: 33px;
 }
 .txtimgtop {
-  font-size: 3rem;
+  font-size: calc(var(--bs-body-font-size) * 3);
   line-height: 3rem;
   margin-bottom:1rem;
 }
@@ -180,7 +180,7 @@ top: -30px;
 }
 .mainform h2 {
   margin-bottom: 4rem;
-  font-size: 1.75rem;
+  font-size: calc(var(--bs-body-font-size) * 1.75);
   line-height: 40px;
 }
 .socdtl{
@@ -188,7 +188,7 @@ top: -30px;
 }
 .tst p {
 line-height: 1.875rem;
-font-size: 1.25rem;
+font-size: calc(var(--bs-body-font-size) * 1.25);
 }
 .tst {
 padding: 2rem;
@@ -220,7 +220,7 @@ left: 10px;
   margin-bottom: 1.25rem;
   display: flex;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: var(--bs-body-font-size);
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #80808020;
@@ -229,7 +229,7 @@ left: 10px;
   display:none;
 }
 .navbar .navbar-nav.lstul > li > a {
-  font-size: 0.875rem;
+  font-size: calc(var(--bs-body-font-size) * 0.875);
 }
 .gx24{
 gap:1.5rem;
@@ -245,7 +245,7 @@ position: relative;
 height: calc(100vh - 78px);
 }
 .offcanvas-body .accttl{
-font-size: 1rem;
+  font-size: var(--bs-body-font-size) ;
 margin-bottom: 2rem;
 }
 .offcanvas-body .accordion-item,
@@ -275,7 +275,7 @@ section > .container,footer > .container {
 }
 .innoffcan li{
 list-style:none;
-font-size:0.875rem;
+font-size: calc(var(--bs-body-font-size) * 0.875);
 line-height:2.25;
 }
 .innoffcan li a{
@@ -288,9 +288,10 @@ border-bottom: 1px solid ;
 border-bottom: 1px solid #80808020;
 }
 .innoffcan ul.noacc li a{
-font-weight: 500;
-font-size: 1rem;
-line-height: 1.25;
+  font-weight: 500;
+  display:block;
+  font-size:var(--bs-body-font-size) ;
+  line-height: 1.25;
 }
 .innoffcan .accordion-flush>.accordion-item:last-child{
 border-bottom:1px solid #80808020;
@@ -360,7 +361,7 @@ transition: all 0.5s ease-in-out;
     display:none;
   }
   .hdngdv a{
-    font-size:0.875rem;
+    font-size: calc(var(--bs-body-font-size) * 0.875);
     font-weight:400;
     line-height:2.275;
   }

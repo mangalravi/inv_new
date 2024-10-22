@@ -5,7 +5,7 @@
     gap: 3rem;
    }
    .txtimgtop {
-      font-size: 3rem;
+    font-size: calc(var(--bs-body-font-size) * 3);
       line-height: 3rem;
       margin-bottom:1rem;
     }
