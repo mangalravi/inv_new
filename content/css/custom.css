@@ -706,6 +706,7 @@ max-width:175px;
   font-size:calc(var(--bs-body-font-size) * 1.125);
   margin-bottom:2.5rem;
   color:var(--bs-heading-color);
+  font-weight:500;
 }
 .top-most-banner .owl-item svg {
   position: absolute;
@@ -909,11 +910,10 @@ margin-left:0.25rem;
 section.digital{
     background: url(../images/demo-bg.jpg) no-repeat;
   background-position: right center !important;
-  background-size:cover !important;
   transition:all 0.7s;
 }
 section.digital:hover{
-  background-position:97% 97% !important;
+  background-position:90% 90% !important;
 }
 .case{
   font-size: calc(var(--bs-body-font-size)* 1.125);
@@ -2082,6 +2082,89 @@ gap: 1rem;
 }
 /* conatct us end */
 
+
+
+
+/* leadership start */
+
+.toptxtldr{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.leadership img{
+  height:450px;
+  object-fit: cover;
+}
+.ldrdv{
+  border: 1px solid #d5dce5;
+  background: #fcfcfc;
+  border-radius: 5px;
+  transition:all 0.7s;
+}
+.ldrdv .imgdv{
+  border-radius:0.25rem;
+}
+.ldrdv span{
+color:var(--bs-heading-color);
+transition:all 0.7s;
+}
+.btmldr ul{
+list-style:none;
+gap:0.5rem
+}
+.btmldr ul img{
+width:1.5rem;
+height:1.5rem;
+}
+.cardhd{
+  font-weight:600;
+  font-size:1.25rem;
+  color:var(--bs-heading-color);
+  font-family:var(--bs-heading-font-family);
+  }
+  .ldrdv p{
+    margin-bottom:1.5rem;
+  }
+.ldrdv:hover span{
+  transform:translateX(5px);
+  transition:all 0.7s;
+}
+.ldrdv ul li:nth-child(1) a:hover img{
+  filter: invert(18%) sepia(64%) saturate(4636%) hue-rotate(344deg) brightness(97%) contrast(87%);
+}
+.ldrdv ul li:nth-child(2) a:hover img{
+  filter: invert(25%) sepia(99%) saturate(1467%) hue-rotate(194deg) brightness(96%) contrast(95%);
+}
+.ldrdv .imgdv img{
+transition:all 0.7s;
+}
+.ldrdv:hover .imgdv img{
+  transform:scale(1.2);
+  overflow:hidden;
+  transition:all 0.7s;
+}
+
+
+
+
+
+
+
+
+/* leadership ends */
+
+
+
+
+
+
+
+
 @media(width < 425px ) {
   .maintabdv li.active {
     min-height: 750px;
@@ -2120,4 +2203,9 @@ gap: 1rem;
   .thumbnails{
     max-width:1296px;
   }
+}
+@media(3000px < width){
+  section.digital{
+    background-size:cover !important;
+}
 }
