@@ -913,7 +913,7 @@ section.digital{
   transition:all 0.7s;
 }
 section.digital:hover{
-  background-position:90% 90% !important;
+  background-position:97% 97% !important;
 }
 .case{
   font-size: calc(var(--bs-body-font-size)* 1.125);
