@@ -187,7 +187,7 @@ height:1px;
 content:"";
 transition:all 0.7s;
 }
-.hdngdv a:hover::after{
+.hdngdv:hover a::after{
   width:100%;
   transition:all 0.7s;
 }
@@ -817,9 +817,7 @@ transition:all 0.7s;
   font-size: calc(var(--bs-body-font-size) * 1.125);
   line-height: 25.2px;
 }
-.second-section  .top-img h3.txtwhtlgt{
-  color:#fff;
-}
+
 .second-section  .top-img p{
   display: none;
   line-height: 22px;
@@ -2166,6 +2164,11 @@ height:1.5rem;
     gap: 0;
 }
 }
+@media(width < 991px ) {
+  .second-section  h3.txtwhtlgt{
+    color:#fff !important;
+  }
+}
 @media(426px < width < 992px){
   .tabcontent p {
     line-height: 2rem;
@@ -2176,6 +2179,7 @@ height:1.5rem;
   .offcanvas,.offcanvas-backdrop.show{
     display: none;
   }
+
   header.nvbrhdr.bg-white nav{
     background:#fff;
   }

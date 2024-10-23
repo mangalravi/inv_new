@@ -316,9 +316,15 @@ color:#fff;
 .btmldr ul img{
   filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(105%) contrast(101%);
 }
+.second-section  h3.txtwhtlgt{
+  color: var(--bs-light-heading-color) !important;
+}
 /* contact us end */
 @media(992px < width){
   header.nvbrhdr.bg-white nav {
     background: #000000;
+}
+.second-section  .top-img h3.darkwht{
+  color: var(--bs-heading-color) !important;
 }
 }
