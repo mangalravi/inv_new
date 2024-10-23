@@ -206,7 +206,7 @@ color:#727381;
 }
 .top-img h3,.second-section .top-img p,
 .text-inv,.top-most-banner .maindiv h1{
-  color:var(--bs-light-heading-color) ;
+  color:var(--bs-light-heading-color) !important;
 }
 .four-section h3,.blog .top-img h3,
 .second-section .top-img:hover p,
@@ -308,9 +308,6 @@ color:#fff;
 }
 .mainform .input-container input{
   color:#fff;
-}
-.second-section .top-img h3.darkwht{
-  color:#fff !important;
 }
 .ldrdv {
   background-color: var(--bs-card-bg) !important;

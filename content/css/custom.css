@@ -817,6 +817,9 @@ transition:all 0.7s;
   font-size: calc(var(--bs-body-font-size) * 1.125);
   line-height: 25.2px;
 }
+.second-section  .top-img h3.txtwhtlgt{
+  color:#fff;
+}
 .second-section  .top-img p{
   display: none;
   line-height: 22px;
