@@ -317,7 +317,7 @@ list-style-type:none;
  width:0;
 }
 .pt96 {
- padding-top:58px !important;
+ padding-top:68px !important;
 } 
 
 .maindiv {
@@ -412,14 +412,7 @@ min-width:auto;
    height:1px;
 }
 
-
-
-
-
-
-
-
-
-
-
-/*  */
+.leadership img {
+  height: 250px;
+  object-fit: cover;
+}

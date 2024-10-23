@@ -1,7 +1,9 @@
 :root {
   --bs-heading-color:#fffff8;
+  --bs-light-heading-color:#0e1726;
   --bs-para-color: #b4b4b5;
  --bs-border-color :#2f3235;
+ --bs-card-bg : #1e2222;
  --bs-link-active-color:#091F2C;
  --bs-body-bg: #000;
 }
@@ -11,9 +13,6 @@
 .navbar div > a img:first-child{
   display:none;
  }
-.top-most-banner .maindiv h1{
-  color:#0e1726;
-}
 .top-most-banner .maindiv h1 + p{
   color:#1D2A41;
 }
@@ -40,7 +39,7 @@ header nav{
     background:#3c3c3c;
   }
   .second-section ,.four-section,.digital,.insidesec,.blog,footer{
-background-color:#1E2222 !important;
+background-color:var(--bs-card-bg) !important;
   }
   section.second-section{
     background: url(../images/bg-round-dark.png) no-repeat;
@@ -59,27 +58,27 @@ background-color:#1E2222 !important;
     transition: all 0.7s;
   }
   section.third-section,.social {
-    background: #010102 !important;
+    background: #010102;
   }
   .rgttst,.rgttst img:last-child {
-    background:#030304 !important;
+    background:#030304;
   }
-  .socialcard.bg-white,.client,.testimonial{
-    background:#1e2222 !important;
+  .socialcard,.client,.testimonial{
+    background:var(--bs-card-bg);
   }
- .testimonial.pb-0{
-    padding-bottom:112px !important;
+  section.testimonial{
+    padding-bottom:112px;
   }
   .lfttst h6 {
     color:var(--bs-heading-color);
   }
   .btn-secondary {
     background: var(--bs-link-active-color);
-    color: #0e1726;
+    color: var(--bs-light-heading-color);
 }
 .btn-secondary:hover {
   background: var(--bs-link-active-color);
-    color: #0e1726;
+    color: var(--bs-light-heading-color);
   border: 1px solid transparent;
 }
   .socialcard span{
@@ -133,7 +132,7 @@ background-color:#1E2222 !important;
   color: #bfbfbf;
   }
 .prod-card {
-  background-color:#1e2222 !important;
+  background-color:var(--bs-card-bg) ;
 }
 
 footer .socialicon li a:hover img{
@@ -178,7 +177,7 @@ color:#727381;
   opacity: 0.7;
 }
   .bgsec {
-    background: #0e1726;
+    background: var(--bs-light-heading-color);
   }
    .dropdown-toggle::after {
     border: solid #fff;
@@ -205,11 +204,9 @@ color:#727381;
 .navbar-toggler{
   background:transparent;
 }
-.text-inv{
-  color:#0e1726 !important;
-}
-.top-img h3,.second-section .top-img p{
-  color:#0e1726 !important;
+.top-img h3,.second-section .top-img p,
+.text-inv,.top-most-banner .maindiv h1{
+  color:var(--bs-light-heading-color) ;
 }
 .four-section h3,.blog .top-img h3,
 .second-section .top-img:hover p,
@@ -258,7 +255,7 @@ color:#727381;
 }
 .maintabdv li,.maintabdv li.active{
   border: 1px solid #010102;
-  background:#1e2222;
+  background:var(--bs-card-bg);
 }
 .grow{
   background: url(../images/about-us/dark/about-top-bg.jpg) no-repeat;
@@ -314,6 +311,13 @@ color:#fff;
 }
 .second-section .top-img h3.darkwht{
   color:#fff !important;
+}
+.ldrdv {
+  background-color: var(--bs-card-bg) !important;
+  border: 0;
+}
+.btmldr ul img{
+  filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(105%) contrast(101%);
 }
 /* contact us end */
 @media(992px < width){

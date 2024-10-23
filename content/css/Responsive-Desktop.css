@@ -404,7 +404,7 @@ display:none;
 width:0;
 }
 .pt96 {
-padding-top:58px !important;
+padding-top:68px !important;
 } 
 .maindiv {
 height: calc(100vh - 68px);
@@ -503,4 +503,9 @@ padding:0 20px;
   100%{
      width:40px;
   }
+}
+
+.leadership img {
+  height: 250px;
+  object-fit: cover;
 }

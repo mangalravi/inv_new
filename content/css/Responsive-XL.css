@@ -27,3 +27,8 @@
  footer .socialicon {
    gap: 30px;
 }  
+
+.leadership img {
+  height: 250px;
+  object-fit: cover;
+}

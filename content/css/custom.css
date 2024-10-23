@@ -697,7 +697,6 @@ max-width:175px;
 }
 .top-most-banner .maindiv  h1{
   font-size: calc(var(--bs-body-font-size)* 4);
-  font-weight: 500;
 }
 .text-light{
  color:#fff;
@@ -706,7 +705,6 @@ max-width:175px;
   font-size:calc(var(--bs-body-font-size) * 1.125);
   margin-bottom:2.5rem;
   color:var(--bs-heading-color);
-  font-weight:500;
 }
 .top-most-banner .owl-item svg {
   position: absolute;
@@ -822,7 +820,6 @@ transition:all 0.7s;
 .second-section  .top-img p{
   display: none;
   line-height: 22px;
-  margin-bottom: 0;
   color:#fff;
   font-size: calc(var(--bs-body-font-size) * 0.875);
   transition: all 0.7s;
@@ -844,6 +841,7 @@ section.marquee{
   padding: 5px;
   box-shadow: 0px 4px 16px 0px #464C881A;
   border-radius: 0.5rem;
+  background:#fff;
   transition:all 0.7s;
 }
 .prod-card > div:not(.btmprod){
@@ -949,6 +947,7 @@ section.digital:hover{
   font-size: calc(var(--bs-body-font-size) * 1.125);
  margin-bottom: 2.5rem;
  padding-left:0.35rem;
+ min-height:169px;
 }
 .rgttst img:first-child{
 width: 73px !important;
@@ -962,6 +961,9 @@ margin-right: 1.25rem;
     bottom: 42px;
     background: #fff;
     z-index: 1;
+}
+section.testimonial{
+  padding-bottom: 0;
 }
 .testimonial .slick-dots{
   display: flex;
@@ -1024,9 +1026,6 @@ margin-bottom:0.5rem;
 }
 .close-white,.menu-white{
 display:none;
-}
-.rgttst  p{
-  min-height:169px;
 }
 /* testimonial section end */
 footer {
@@ -1226,6 +1225,7 @@ transform:translateX(4px);
 .socialcard{
   box-shadow: 0px 8px 16px 0px #464C880F;
   border-radius: 0.5rem;
+  background:#fff;
   transition:all 0.7s;
 }
 .socialcard img{
@@ -1530,7 +1530,7 @@ color:var(--bs-heading-color);
   height: 1.5rem;
   left: calc(100% - 2.75rem);
   z-index: 9;
-  top: calc(100% - 45px);
+  top: calc(100% - 42px);
 }
 .client .slick-track{
   display:flex;
@@ -1711,8 +1711,7 @@ background:#00001059;
   font-size: calc(var(--bs-body-font-size) * 3.99);
   line-height: 81.66px;
   letter-spacing: 1px;
-  background-image: url(../images/about-us/we-are-shaping-bg.jpg);
-  background-size: cover;
+  background-image: url(../images/Contact-us/contact-text-bg.png);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -1722,7 +1721,7 @@ background:#00001059;
   margin-bottom:70px;
 }
 .numdv{
-  gap: 1.25rem;
+  gap: 1.063rem;
 }
 .numdv img{
   margin-top: 0.875rem;
@@ -2066,7 +2065,6 @@ gap: 1rem;
 .mainform .input-container input:valid ~ .label {
   top: -38px;
   font-size: calc(var(--bs-body-font-size) * 1.125);
-  color: var(--bs-para-color);
 }
 .mainform .input-container .underline {
   bottom: 0;
@@ -2088,17 +2086,11 @@ gap: 1rem;
 /* leadership start */
 
 .toptxtldr{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .leadership img{
-  height:450px;
-  object-fit: cover;
+  height:400px;
 }
 .ldrdv{
   border: 1px solid #d5dce5;
@@ -2108,6 +2100,11 @@ gap: 1rem;
 }
 .ldrdv .imgdv{
   border-radius:0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ldrdv .imgdv img{
+ transition:all 0.7s;
 }
 .ldrdv span{
 color:var(--bs-heading-color);
@@ -2122,14 +2119,11 @@ width:1.5rem;
 height:1.5rem;
 }
 .cardhd{
-  font-weight:600;
-  font-size:1.25rem;
+  font-size: calc(var(--bs-body-font-size) * 1.25);
   color:var(--bs-heading-color);
   font-family:var(--bs-heading-font-family);
   }
-  .ldrdv p{
-    margin-bottom:1.5rem;
-  }
+
 .ldrdv:hover span{
   transform:translateX(5px);
   transition:all 0.7s;
@@ -2140,9 +2134,7 @@ height:1.5rem;
 .ldrdv ul li:nth-child(2) a:hover img{
   filter: invert(25%) sepia(99%) saturate(1467%) hue-rotate(194deg) brightness(96%) contrast(95%);
 }
-.ldrdv .imgdv img{
-transition:all 0.7s;
-}
+
 .ldrdv:hover .imgdv img{
   transform:scale(1.2);
   overflow:hidden;
@@ -2204,7 +2196,7 @@ transition:all 0.7s;
     max-width:1296px;
   }
 }
-@media(3000px < width){
+@media(1800px < width){
   section.digital{
     background-size:cover !important;
 }
