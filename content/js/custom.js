@@ -369,100 +369,137 @@ document.querySelectorAll('.maintabdv li').forEach(function(li) {
 jQuery(function () {
   const $slider1 = jQuery(".timeline .slick-slider");
   const $slider2 = jQuery(".yeartimeslide");
-
-  // Initialize the first slider
-  $slider1.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    infinite: false // Disable looping
-  });
-
-  // Initialize the second slider
-  $slider2.slick({
-    vertical: true,
-    infinite: false,
-    centerMode: true,
-    centerPadding: '20px',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-  });
-
-  function syncSlides(currentSlide) {
-    $slider1.slick('slickGoTo', currentSlide);
-    $slider2.slick('slickGoTo', currentSlide);
-  }
-
-  function handleWheel(event) {
-    event.preventDefault();
-    
-    const currentSlide = $slider1.slick('slickCurrentSlide');
-    const totalSlides = $slider1.slick('getSlick').slideCount;
-    const delta = event.originalEvent.deltaY;
-
-    if (delta > 0) {
-      if (currentSlide < totalSlides - 1) {
-        syncSlides(currentSlide + 1);
-      } else {
-        window.scrollBy(0, 100); // Adjust scroll amount as needed
-      }
-    } else {
-      if (currentSlide > 0) {
-        syncSlides(currentSlide - 1);
-      } else {
-        window.scrollBy(0, -100);
-      }
-    }
-  }
-
-  function handleTouchStart(event) {
-    const touch = event.originalEvent.touches[0];
-    this.startY = touch.clientY;
-  }
-
-  function handleTouchMove(event) {
-    const touch = event.originalEvent.touches[0];
-    const deltaY = this.startY - touch.clientY;
-
-    if (Math.abs(deltaY) > 10) { // Threshold for swipe detection
-      event.preventDefault(); // Prevent default scroll behavior
-      
-      const currentSlide = $slider1.slick('slickCurrentSlide');
-      const totalSlides = $slider1.slick('getSlick').slideCount;
-
-      if (deltaY > 0) {
-        // Swipe up
-        if (currentSlide < totalSlides - 1) {
-          syncSlides(currentSlide + 1);
-        } else {
-          window.scrollBy(0, 100); // Allow page scroll if at the last slide
-        }
-      } else {
-        // Swipe down
-        if (currentSlide > 0) {
-          syncSlides(currentSlide - 1);
-        } else {
-          window.scrollBy(0, -100); // Allow page scroll if at the first slide
-        }
-      }
-    }
-  }
-
-  // Attach event listeners
-  $slider1.on('wheel', handleWheel);
-  $slider2.on('wheel', handleWheel);
-  
-  // Touch events for mobile
-  $slider1.on('touchstart', handleTouchStart);
-  $slider1.on('touchmove', handleTouchMove);
-  $slider2.on('touchstart', handleTouchStart);
-  $slider2.on('touchmove', handleTouchMove);
+  const $scrollbarHandle = $('.os-scrollbar-handle');
+  const totalSlides = 20; // Total number of slides (0 to 20)
 
   $(document).ready(function() {
+    // Initialize the first slider
+    $slider1.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      infinite: false // Disable looping
+    });
+
+    // Initialize the second slider
+    $slider2.slick({
+      vertical: true,
+      infinite: false,
+      centerMode: true,
+      centerPadding: '20px',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+    });
+
+    function syncSlides(currentSlide) {
+      $slider1.slick('slickGoTo', currentSlide);
+      $slider2.slick('slickGoTo', currentSlide);
+      updateScrollbar(currentSlide);
+      updateActiveDot(currentSlide);
+    }
+
+    function updateScrollbar(currentSlide) {
+      const scrollbarWidth = $('.os-scrollbar-track').width();
+      const handleWidth = $scrollbarHandle.width();
+      const position = (currentSlide / (totalSlides - 1)) * (scrollbarWidth - handleWidth);
+      $scrollbarHandle.css({
+        left: position,
+        transition: 'left 0.7s' // Smooth transition
+      });
+    }
+
+    function updateActiveDot(currentSlide) {
+      $('.rounded-dots-scrollbar').removeClass('active'); // Remove active class from all dots
+      $('.rounded-dots-scrollbar').eq(currentSlide).addClass('active'); // Add active class to the current dot
+    }
+
+    // Handle wheel event
+    function handleWheel(event) {
+      // Prevent default action
+      event.preventDefault();
+      const currentSlide = $slider1.slick('slickCurrentSlide');
+      let newSlide;
+
+      const delta = event.originalEvent.deltaY;
+
+      if (delta > 0) {
+        // Scroll down
+        newSlide = Math.min(currentSlide + 1, totalSlides - 1);
+      } else {
+        // Scroll up
+        newSlide = Math.max(currentSlide - 1, 0);
+      }
+
+      syncSlides(newSlide);
+    }
+
+    // Handle touch events
+    function handleTouchStart(event) {
+      const touch = event.originalEvent.touches[0];
+      this.startY = touch.clientY;
+    }
+
+    function handleTouchMove(event) {
+      const touch = event.originalEvent.touches[0];
+      const deltaY = this.startY - touch.clientY;
+
+      if (Math.abs(deltaY) > 10) {
+        event.preventDefault();
+        const currentSlide = $slider1.slick('slickCurrentSlide');
+        let newSlide;
+
+        if (deltaY > 0) {
+          // Swipe up
+          newSlide = Math.min(currentSlide + 1, totalSlides - 1);
+        } else {
+          // Swipe down
+          newSlide = Math.max(currentSlide - 1, 0);
+        }
+
+        syncSlides(newSlide);
+      }
+    }
+
+    // Attach event listeners
+    $slider1.on('wheel', handleWheel);
+    $slider2.on('wheel', handleWheel);
+
+    // Touch events for mobile
+    $slider1.on('touchstart', handleTouchStart);
+    $slider1.on('touchmove', handleTouchMove);
+    $slider2.on('touchstart', handleTouchStart);
+    $slider2.on('touchmove', handleTouchMove);
+
+    // Scrollbar dragging functionality
+    $scrollbarHandle.on('mousedown', function (e) {
+      const scrollbarWidth = $('.os-scrollbar-track').width();
+      const handleWidth = $(this).width();
+
+      $(document).on('mousemove', function (event) {
+        let newPosition = event.pageX - $scrollbarHandle.parent().offset().left;
+        newPosition = Math.max(0, Math.min(newPosition, scrollbarWidth - handleWidth));
+
+        const currentSlide = Math.floor((newPosition / (scrollbarWidth - handleWidth)) * (totalSlides - 1));
+        syncSlides(currentSlide);
+      });
+
+      $(document).on('mouseup', function () {
+        $(document).off('mousemove');
+      });
+
+      return false; // Prevent text selection
+    });
+
+    // Click event for dots
+    $('.rounded-dots-scrollbar').on('click', function() {
+      const dotIndex = $(this).index();
+      syncSlides(dotIndex);
+    });
+
     $('.yeartimeslide').on('afterChange', function(event, slick, currentSlide) {
-      if (currentSlide >= 4) {
+      if (currentSlide >= 7) {
         $('.rgthd').addClass('changed');
       } else {
         $('.rgthd').removeClass('changed');

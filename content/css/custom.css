@@ -1927,7 +1927,7 @@ background-size:cover !important;
 .timeline .slick-dots li.slick-active button{
   width: 60px;
   height: 60px;
-  background: #E6EDF7 url(../images/about-us/slider-round.svg) no-repeat;
+  /* background: #E6EDF7 url(../images/about-us/slider-round.svg) no-repeat; */
   background-size:cover;
   border: 1px solid #fff;
 }
@@ -2208,3 +2208,52 @@ height:1.5rem;
     background-size:cover !important;
 }
 }
+
+
+
+
+
+
+
+
+
+.scroll-year-text {
+  position: absolute;
+  color: #0E1726;
+  font-size: 1.125rem;
+  font-weight: 700;
+  top:-13px;
+}
+.scroll-start-year {
+  left: 0;
+}
+.scroll-end-year {
+  right: 0;
+}
+.os-scrollbar-handle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url(../images/about-us/slider-round.svg);
+  cursor: move;
+  top:-1.5rem;
+}
+.mb80{
+  margin-bottom:80px;
+}
+.horizontal-scroll-border {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rounded-dots-scrollbar {
+  background-color: #9aa1a8; 
+  border-radius: 50%;
+  width: 8px; 
+  height: 8px; 
+  display: inline-block; 
+  cursor:pointer;
+  transition:all 0.7s; 
+}
+

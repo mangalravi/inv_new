@@ -506,3 +506,16 @@ padding:0 20px;
   height: 250px;
   object-fit: cover;
 }
+.os-scrollbar-handle {
+  position: absolute;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  top: -1rem;
+}
+.scroll-year-text {
+  font-size: 0.875rem;
+  top: -0.5rem;
+}
+.mb80{
+  margin-bottom:40px;
+}
