@@ -370,19 +370,31 @@ jQuery(function () {
   const $slider1 = jQuery(".timeline .slick-slider");
   const $slider2 = jQuery(".yeartimeslide");
   const $scrollbarHandle = $('.os-scrollbar-handle');
-  const totalSlides = 20; // Total number of slides (0 to 20)
+  const totalSlides = 20; // Total number of slides (0 to 19)
+  const totalDots = 20; // Total number of dots
+  const $dotsContainer = $('.horizontal-scroll-border');
 
   $(document).ready(function() {
-    // Initialize the first slider
+    // Generate dots dynamically
+    for (let i = 0; i < totalDots; i++) {
+      const dot = $('<div class="rounded-dots-scrollbar"></div>');
+      if (i === 0) {
+        dot.addClass('active'); // Set the active class on the first dot
+      }
+      $dotsContainer.append(dot);
+    }
+
+    // Initialize the first slider with draggable option set to false
     $slider1.slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       dots: false,
-      infinite: false // Disable looping
+      infinite: false,
+      draggable: false // Disable dragging
     });
 
-    // Initialize the second slider
+    // Initialize the second slider with draggable option set to false
     $slider2.slick({
       vertical: true,
       infinite: false,
@@ -391,6 +403,7 @@ jQuery(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
+      draggable: false // Disable dragging
     });
 
     function syncSlides(currentSlide) {
@@ -417,7 +430,6 @@ jQuery(function () {
 
     // Handle wheel event
     function handleWheel(event) {
-      // Prevent default action
       event.preventDefault();
       const currentSlide = $slider1.slick('slickCurrentSlide');
       let newSlide;

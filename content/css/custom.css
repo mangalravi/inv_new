@@ -134,7 +134,8 @@ body{
       height: 25px;
       }
   ::selection{
-  color:#bd4328;
+  background:#bd4328;
+  color:#f4f4f4;
 }
    .nav-item {  
   padding: 1.25rem 1rem;
@@ -2218,17 +2219,9 @@ height:1.5rem;
 
 
 .scroll-year-text {
-  position: absolute;
   color: #0E1726;
   font-size: 1.125rem;
   font-weight: 700;
-  top:-13px;
-}
-.scroll-start-year {
-  left: 0;
-}
-.scroll-end-year {
-  right: 0;
 }
 .os-scrollbar-handle {
   position: absolute;
