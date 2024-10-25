@@ -221,9 +221,8 @@ height: 1.25rem;
 }
 .navbar .navbar-nav > li {
   display: block;
-  padding: 0 0.75rem;
-  margin: auto 1rem;
-  transition:all 0.7s;
+  padding: 0 1.75rem;
+  transition: all 0.5s;
 }
 .navbar .navbar-nav > li:hover{
   cursor: pointer;
@@ -235,13 +234,13 @@ height: 1.25rem;
   position: absolute;
   top: 43%;
   right: -1rem;
-    transition:all 0.7s;
+    transition:all 0.5s;
 }
 .navbar .parent-menu:hover .menu-arrow{
   top: 49%;
   border: solid var(--bs-heading-color);
   border-width: 0 1.5px 1.5px 0;
-    transition:all 0.7s;
+    transition:all 0.5s;
 }
 .offcanvas{
   background: linear-gradient(97.03deg, rgba(242, 252, 252, 0.9) 5.33%, #FFFFFF 102.02%);
@@ -296,7 +295,7 @@ opacity: 1;
   background: linear-gradient(97.03deg, rgba(242, 252, 252, 0.9) 5.33%, #FFFFFF 102.02%);
   z-index: 1;
   overflow: hidden;
-    transition:all 0.7s;
+    transition:all 0.25s;
 }
 .submenu:after{
   content: '';
@@ -371,7 +370,7 @@ font-weight:700;
 .parent-menu:hover .submenu, .parent-menu:focus .submenu {
   visibility: visible;
   opacity: 1;
-transition:all 0.7s;
+transition:all 0.5s;
 }
 .parent-menu:hover a, .parent-menu:focus a {
   outline: none;
@@ -1608,14 +1607,44 @@ background:#00001059;
 .pttop{
   padding-top: 220px;
 }
-.maintabdv{
-  min-height: 564px;
+
+.scroll-year-text {
+  color: #0E1726;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.os-scrollbar-handle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url(../images/about-us/slider-round.svg);
+  cursor: move;
+  top:-1.5rem;
+}
+.mb80{
+  margin-bottom:80px;
+}
+.horizontal-scroll-border {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rounded-dots-scrollbar {
+  background-color: #9aa1a8; 
+  border-radius: 50%;
+  width: 8px; 
+  height: 8px; 
+  display: inline-block; 
+  cursor:pointer;
+  transition:all 0.7s; 
 }
 .maintabdv li{
  padding:0;
  padding-top: 50px;
  background: linear-gradient(180deg, #FFFFFF 0%, #E4E4E7 100%);
  border: 1px solid #D7D7DB;
+ transition: all 0.7s;
 }
 .maintabdv li.active{
   overflow:hidden;
@@ -1624,18 +1653,17 @@ background:#00001059;
   background: #fff;
   padding: 50px 0 0 40px;
   display: flex;
-  position:relative;
+  transition:all 0.7s;
 }
 .maintabdv li .tabhead{
-  min-width: 123px;
-  max-width: 123px;
+  width: 123px;
  cursor:pointer;
   padding-bottom:40px;
+  /* transition:all 0.7s; */
 }
 .maintabdv li.active .tabhead{
-  min-width: 40px;
-  max-width: 80px;
   justify-content:start;
+  transition:all 0.7s;
 }
 .imgtxt {
   font-size: 283px;
@@ -1683,10 +1711,11 @@ background:#00001059;
 }
 .maintabdv li .tabcontent{
   display:none;
-  opacity:0;
-  visibility: hidden;
-  width:0;
+  /* opacity:0; */
+  /* visibility: hidden; */
+  /* width:0; */
   padding-right: 50px;
+  padding-bottom: 225px;
   transition:all 0.7s;
 }
 .maintabdv .tabcontent img{
@@ -1695,9 +1724,9 @@ background:#00001059;
 }
 .maintabdv li.active .tabcontent{
   display: block;
-  opacity:1;
-  visibility: visible;
-  width:100%;
+  /* opacity:1; */
+  /* visibility: visible; */
+  /* width:100%; */
   position:relative;
   transition: all 0.7s;
 }
@@ -1995,7 +2024,7 @@ min-height: 180px;
   position: relative;
   margin-bottom: 70px;
 }
-.mainform  label::after {
+.mainform  .label::after {
   position: absolute;
   content:"*";
  right:-1rem;
@@ -2056,15 +2085,15 @@ gap: 1rem;
 .darkquote{
   display:none;
 }
-.mainform .input-container .label {
+.mainform .input-container label {
   top: 0;
   left: 0;
   color: #1D2A41;
   font-size: calc(var(--bs-body-font-size) * 1.5);
   transition: all 0.7s;
 }
-.mainform .input-container input:focus ~ .label,
-.mainform .input-container input:valid ~ .label {
+.mainform .input-container input:focus ~ label,
+.mainform .input-container input:valid ~ label {
   top: -38px;
   font-size: calc(var(--bs-body-font-size) * 1.125);
 }
@@ -2143,26 +2172,33 @@ height:1.5rem;
   transition:all 0.7s;
 }
 
-
-
-
-
-
-
-
 /* leadership ends */
 
 
 
-
+#successMessage {
+  margin-top: 10px;
+  font-size: 0.775rem;
+  font-weight: 500;
+  position: absolute;
+  left: 100px;
+}
+.error-message{
+  font-size: 0.775rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: -1.25rem;
+}
 
 
 
 
 @media(width < 425px ) {
   .maintabdv li.active {
-    min-height: 750px;
     gap: 0;
+}
+.maintabdv li.active .tabcontent {
+  padding-bottom: 100px !important;
 }
 }
 @media(width < 991px ) {
@@ -2209,44 +2245,28 @@ height:1.5rem;
     background-size:cover !important;
 }
 }
-
-
-
-
-
-
-
-
-
-.scroll-year-text {
-  color: #0E1726;
-  font-size: 1.125rem;
-  font-weight: 700;
+@media (1599px < width < 1799px){
+  .contactus{
+    background-position:142% 100%;
+  }
 }
-.os-scrollbar-handle {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: url(../images/about-us/slider-round.svg);
-  cursor: move;
-  top:-1.5rem;
+@media (1800px < width < 2199px){
+  .contactus{
+    background-position: -429px 100%;
+  }
 }
-.mb80{
-  margin-bottom:80px;
+@media (2200px < width < 2699px){
+  .contactus{
+    background-position: -560px 100%;
+  }
 }
-.horizontal-scroll-border {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+@media (2700px < width < 3099px ){
+  .contactus{
+    background-position: -725px 100%;
+  }
 }
-
-.rounded-dots-scrollbar {
-  background-color: #9aa1a8; 
-  border-radius: 50%;
-  width: 8px; 
-  height: 8px; 
-  display: inline-block; 
-  cursor:pointer;
-  transition:all 0.7s; 
+@media (3100px < width ){
+  .contactus{
+    background-position: -1295px 100%;
+  }
 }
-

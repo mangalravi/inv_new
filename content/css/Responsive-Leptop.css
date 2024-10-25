@@ -53,10 +53,7 @@ section{
 .maintabdv li.active .tabcontent{
    position:static
  }
- .maintabdv li.active .tabhead {
-   min-width: 100%;
-   max-width: 100%;
- }
+
  .mb66 {
    margin-bottom: 33px;
 }
@@ -376,22 +373,21 @@ margin-bottom: 2rem;
  transform:none;
 }
 .maintabdv li .tabhead {
- max-width: 100%;
- padding: 1.5rem;
+  padding: 0;
 }
 .maintabdv li.active .tabhead {
-        max-height: 55px;
-       padding: 0;
-       align-items: baseline;
-       margin-bottom: 0.5rem;
-       padding-bottom: 0.5rem;
-       border-bottom: 1px solid #e6e6e6;
+  width:100%;
+  padding: 0;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e6e6e6;
 }
 .imgtxt{
  left:-0.5rem;
 }
 .maintabdv li{
- padding-top:0;
+  padding: 0.25rem 1.5rem;
 }
 .top-most-banner .owl-dot {
    padding-right: 4.5rem;
@@ -412,4 +408,7 @@ min-width:auto;
 .leadership img {
   height: 250px;
   object-fit: cover;
+}
+.maintabdv li .tabhead h4{
+  font-size: calc(var(--bs-body-font-size)* 1.25);
 }

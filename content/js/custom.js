@@ -319,12 +319,21 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".menu").click(function () {
     $("#First").addClass("offtrans");
+
+    // Check the class after adding it
+    if ($("#First").hasClass("offtrans")) {
+      $("html").addClass("overflow-hidden");
+    } 
   });
 
   $("#First .btn-close").click(function () {
     $("#First").removeClass("offtrans");
+
+    // Remove the overflow-hidden class when closing
+    $("html").removeClass("overflow-hidden");
   });
 });
+
 
 
 document.querySelectorAll('.maintabdv li').forEach(function(li) {
@@ -384,17 +393,17 @@ jQuery(function () {
       $dotsContainer.append(dot);
     }
 
-    // Initialize the first slider with draggable option set to false
+    // Initialize the first slider
     $slider1.slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       dots: false,
       infinite: false,
-      draggable: false // Disable dragging
+      draggable: false
     });
 
-    // Initialize the second slider with draggable option set to false
+    // Initialize the second slider
     $slider2.slick({
       vertical: true,
       infinite: false,
@@ -403,7 +412,7 @@ jQuery(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      draggable: false // Disable dragging
+      draggable: false
     });
 
     function syncSlides(currentSlide) {
@@ -419,16 +428,16 @@ jQuery(function () {
       const position = (currentSlide / (totalSlides - 1)) * (scrollbarWidth - handleWidth);
       $scrollbarHandle.css({
         left: position,
-        transition: 'left 0.7s' // Smooth transition
+        transition: 'left 0.7s'
       });
     }
 
     function updateActiveDot(currentSlide) {
-      $('.rounded-dots-scrollbar').removeClass('active'); // Remove active class from all dots
-      $('.rounded-dots-scrollbar').eq(currentSlide).addClass('active'); // Add active class to the current dot
+      $('.rounded-dots-scrollbar').removeClass('active');
+      $('.rounded-dots-scrollbar').eq(currentSlide).addClass('active');
     }
 
-    // Handle wheel event
+    // Handle mouse wheel event
     function handleWheel(event) {
       event.preventDefault();
       const currentSlide = $slider1.slick('slickCurrentSlide');
@@ -437,72 +446,43 @@ jQuery(function () {
       const delta = event.originalEvent.deltaY;
 
       if (delta > 0) {
-        // Scroll down
         newSlide = Math.min(currentSlide + 1, totalSlides - 1);
       } else {
-        // Scroll up
         newSlide = Math.max(currentSlide - 1, 0);
       }
 
       syncSlides(newSlide);
     }
 
-    // Handle touch events
-    function handleTouchStart(event) {
-      const touch = event.originalEvent.touches[0];
-      this.startY = touch.clientY;
-    }
+    // Handle mouse and touch dragging
+    function handleDragStart(e) {
+      e.preventDefault();
+      const $this = $(this);
+      const startX = e.pageX || e.originalEvent.touches[0].pageX;
+      const handleWidth = $this.width();
+      const scrollbarWidth = $this.parent().width();
 
-    function handleTouchMove(event) {
-      const touch = event.originalEvent.touches[0];
-      const deltaY = this.startY - touch.clientY;
-
-      if (Math.abs(deltaY) > 10) {
-        event.preventDefault();
-        const currentSlide = $slider1.slick('slickCurrentSlide');
-        let newSlide;
-
-        if (deltaY > 0) {
-          // Swipe up
-          newSlide = Math.min(currentSlide + 1, totalSlides - 1);
-        } else {
-          // Swipe down
-          newSlide = Math.max(currentSlide - 1, 0);
-        }
-
-        syncSlides(newSlide);
-      }
-    }
-
-    // Attach event listeners
-    $slider1.on('wheel', handleWheel);
-    $slider2.on('wheel', handleWheel);
-
-    // Touch events for mobile
-    $slider1.on('touchstart', handleTouchStart);
-    $slider1.on('touchmove', handleTouchMove);
-    $slider2.on('touchstart', handleTouchStart);
-    $slider2.on('touchmove', handleTouchMove);
-
-    // Scrollbar dragging functionality
-    $scrollbarHandle.on('mousedown', function (e) {
-      const scrollbarWidth = $('.os-scrollbar-track').width();
-      const handleWidth = $(this).width();
-
-      $(document).on('mousemove', function (event) {
-        let newPosition = event.pageX - $scrollbarHandle.parent().offset().left;
+      $(document).on('mousemove touchmove', function (moveEvent) {
+        const currentX = moveEvent.pageX || moveEvent.originalEvent.touches[0].pageX;
+        let newPosition = currentX - $this.parent().offset().left;
         newPosition = Math.max(0, Math.min(newPosition, scrollbarWidth - handleWidth));
 
         const currentSlide = Math.floor((newPosition / (scrollbarWidth - handleWidth)) * (totalSlides - 1));
         syncSlides(currentSlide);
+        $this.css({ left: newPosition });
       });
 
-      $(document).on('mouseup', function () {
-        $(document).off('mousemove');
+      $(document).on('mouseup touchend', function () {
+        $(document).off('mousemove touchmove');
       });
 
       return false; // Prevent text selection
-    });
+    }
+
+    // Attach event listeners
+    $scrollbarHandle.on('mousedown touchstart', handleDragStart);
+    $slider1.on('wheel', handleWheel);
+    $slider2.on('wheel', handleWheel);
 
     // Click event for dots
     $('.rounded-dots-scrollbar').on('click', function() {
@@ -518,4 +498,96 @@ jQuery(function () {
       }
     });
   });
+});
+
+
+
+// contact form validation
+
+document.getElementById('submitBtn').addEventListener('click', function(event) {
+  event.preventDefault(); 
+  clearErrorMessages();
+
+  const fields = {
+    fullName: {
+      value: document.getElementById('fullName').value.trim(),
+      errorId: 'fullNameError',
+      validate: (value) => value.length >= 3,
+      errorMessage: "Please enter your name"
+    },
+    email: {
+      value: document.getElementById('email').value.trim(),
+      errorId: 'emailError',
+      validate: (value) => /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|.+\.in)$/.test(value),
+      errorMessage: "Enter a valid email"
+    },
+    phone: {
+      value: document.getElementById('phone').value.trim(),
+      errorId: 'phoneError',
+      validate: (value) => /^[0-9]{10}$/.test(value),
+      errorMessage: "Enter a valid phone number"
+    }
+  };
+
+  let isValid = true;
+
+  for (const field in fields) {
+    if (!fields[field].validate(fields[field].value)) {
+      document.getElementById(fields[field].errorId).textContent = fields[field].errorMessage;
+      document.getElementById(fields[field].errorId).style.display = 'block';
+      isValid = false;
+    }
+  }
+
+  if (isValid) {
+    showSuccessMessage("Form submitted successfully!");
+  }
+});
+
+const inputArray = ['fullNameError', 'emailError', 'phoneError'];
+
+// Clear error messages
+function clearErrorMessages() {
+  inputArray.forEach(id => {
+    document.getElementById(id).style.display = 'none';
+  });
+}
+
+// Show success message and reload the page
+function showSuccessMessage(message) {
+  const successMessageDiv = document.getElementById('successMessage');
+  successMessageDiv.textContent = message;
+  successMessageDiv.style.display = 'block';
+  successMessageDiv.classList.add('success'); 
+
+  setTimeout(() => {
+    successMessageDiv.style.display = 'none';
+    clearInputFields(); 
+    location.reload(); // Reload the page
+  }, 1000);
+}
+
+// Clear input fields
+function clearInputFields() {
+  ['fullName', 'email', 'phone'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+}
+
+// Input validation
+function setupInputValidation(inputId, validateFn, errorId) {
+  document.getElementById(inputId).addEventListener('input', function() {
+    const isValid = validateFn(this.value.trim());
+    document.getElementById(errorId).style.display = isValid ? 'none' : 'block';
+  });
+}
+
+// Validate inputs
+setupInputValidation('fullName', (value) => value.length >= 3, 'fullNameError');
+setupInputValidation('email', (value) => /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|.+\.in)$/.test(value), 'emailError');
+
+document.getElementById('phone').addEventListener('input', function() {
+  this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+  const isValid = /^[0-9]{10}$/.test(this.value);
+  document.getElementById('phoneError').style.display = isValid ? 'none' : 'block';
 });

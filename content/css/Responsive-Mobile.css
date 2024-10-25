@@ -129,42 +129,45 @@ footer {
 .mainform .input-container input.Message {
   padding-bottom: 2rem;
 }
-.mainform .input-container .label {
+.mainform .input-container label {
   font-size: var(--bs-body-font-size);
    }
    .tabcontent p {
-    line-height: 1.875rem;
+    line-height: 1.75rem;
     font-size: var(--bs-body-font-size);
   }
   .maintabdv li .tabcontent{
     padding:0;
+  }
+  .bfr p.pb100{
+    line-height: 1.75rem;
   }
   .bfr::before,.bfr::after {
     left: 10px;
 }
 .rgtyear .rgthd h2,
 .yeartimeslide .slick-slide p {
-  font-size: calc(var(--bs-body-font-size) * 3);
-    line-height: 3rem;
+  font-size: calc(var(--bs-body-font-size) * 2);
+    line-height: 2rem;
 }
 .rgtyear .rgthd {
-    right: 75px;
+    right: 51px;
   }
   .numdv h2,.numdv span:first-child{
-    font-size: calc(var(--bs-body-font-size) * 2.375);
+    font-size: calc(var(--bs-body-font-size) * 1.75);
   }
   .numdv span:first-child{
     line-height: 0;
   }
   .numdv h2{
-    line-height: 3rem;
+    line-height: 2rem;
   }
-  .maintabdv li.active .tabcontent{
-    position:static
+  .numdv span {
+    font-size:var(--bs-body-font-size);
   }
-  .maintabdv li.active .tabhead {
-    min-width: 100%;
-    max-width: 100%;
+  .maintabdv li .tabcontent {
+  padding-right: 0;
+    padding-bottom: 100px;
   }
   .mb66 {
     margin-bottom: 33px;
@@ -175,16 +178,19 @@ footer {
     margin-bottom:1rem;
   }
   .numdv img {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+    width: 30px;
+}
+.numdv {
+  gap: 0.75rem;
 }
 .maintabdv li.active {
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    padding: 0.5rem 1.5rem 0 1.5rem !important;
     flex-direction: column;
-    min-height: 480px;
     gap:0;
   }
   .pttop {
-    padding-top: 135px;
+    padding-top: 120px;
   }
   .bfr {
     padding-left: 3rem;
@@ -209,15 +215,15 @@ footer {
     display:none;
   }
  .tst p {
-  line-height: 1.875rem;
-  font-size: calc(var(--bs-body-font-size) * 1.25);
+  line-height: 1.75rem;
+  font-size: calc(var(--bs-body-font-size)* 1.15);
 }
 .tst {
   padding: 2rem;
 }
 .pb100 {
-  padding-bottom: 50px;
-}
+  padding-bottom: 35px;
+  }
 .tst img {
   margin-bottom: 1.5rem;
 }
@@ -486,13 +492,18 @@ margin-bottom: 2rem;
 .maintabdv li.active:last-child .tabhead h4,
 .maintabdv li.active .tabhead h4{
   transform:none;
+  font-size: calc(var(--bs-body-font-size)* 1.25);
 }
 .maintabdv li .tabhead {
-  max-width: 100%;
-  padding: 1.5rem;
+  padding: 0;
+}
+.maintabdv li.active .tabcontent {
+  position: static;
+  padding-right: 0;
+  padding-bottom: 140px;
 }
 .maintabdv li.active .tabhead {
-         max-height: 55px;
+         width:100%;
         padding: 0;
         align-items: baseline;
         margin-bottom: 0.5rem;
@@ -503,7 +514,7 @@ margin-bottom: 2rem;
   left:-0.5rem;
 }
 .maintabdv li{
-  padding-top:0;
+  padding: 0.25rem 1.5rem;
 }
 .top-most-banner .owl-dot {
     padding-right: 4.5rem;
@@ -545,4 +556,22 @@ min-width:auto;
 }
 .mb80{
   margin-bottom:40px;
+}
+.valdv img{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+.valdv p{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.valdv b{
+  font-size: 0.775rem;
+}
+.lftyear p{
+  font-size: calc(var(--bs-body-font-size)* 0.9);
+}
+.lftyear .sec-head{
+  font-size: calc(var(--bs-body-font-size)* 1.25);
 }

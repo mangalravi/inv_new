@@ -1070,46 +1070,51 @@
                   <h2>For specific questions, get in touch below</h2>
                   <form class="ps-100 position-relative">
                      
-                      <div class="input-container position-relative mb70">
-                        <input type="text" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
-                        <label class="label fw-medium position-absolute pe-none">Full Name</label>
-                        <div class="underline position-absolute w-100"></div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="input-container position-relative mb70">
-                      <input type="text" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
-                      <label class="label fw-medium position-absolute pe-none">Email Address</label>
+                    <div class="input-container position-relative mb70">
+                      <input type="text" id="fullName" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
+                      <label class="label fw-medium position-absolute pe-none">Full Name</label>
                       <div class="underline position-absolute w-100"></div>
+                      <div id="fullNameError" class="error-message text-danger" style="display: none;"></div>
                     </div>
-                             
+                    
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="input-container position-relative mb70">
+                          <input type="email" id="email" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
+                          <label class="label fw-medium position-absolute pe-none">Email Address</label>
+                          <div class="underline position-absolute w-100"></div>
+                          <div id="emailError" class="error-message text-danger" style="display: none;"></div>
                         </div>
-                          <div class="col-sm-6">
-                            <div class="input-container position-relative mb70">
-                        <input type="tel" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
-                        <label class="label fw-medium position-absolute pe-none">Phone Number</label>
-                        <div class="underline position-absolute w-100"></div>
                       </div>
-                            
-                          </div>
-                       
+                      
+                      <div class="col-sm-6">
+                        <div class="input-container position-relative mb70">
+                          <input type="tel" id="phone" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
+                          <label class="label fw-medium position-absolute pe-none">Phone Number</label>
+                          <div class="underline position-absolute w-100"></div>
+                          <div id="phoneError" class="error-message text-danger" style="display: none;"></div>
+                        </div>
                       </div>
+                    </div>
+                    
+                  
                        <div class="input-container position-relative mb70">
                         <input type="text" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="">
-                        <label class="label fw-medium position-absolute pe-none">Subject</label>
+                        <label class="fw-medium position-absolute pe-none">Subject</label>
                         <div class="underline position-absolute w-100"></div>
                       </div>
                       <div class="input-container position-relative mb70 mb50">
                         <input type="text" class="fs-4 w-100 pb-1 pb-md-3 bg-transparent" required="" class="Message">
-                        <label class="label fw-medium position-absolute pe-none">Message</label>
+                        <label class="fw-medium position-absolute pe-none">Message</label>
                         <div class="underline position-absolute w-100"></div>
                       </div>
-                      <a href="#" class="butn butn__new bgdarkwhite" tabindex="-1">
+                      <a href="#" class="butn butn__new bgdarkwhite" id="submitBtn" tabindex="-1">
                         Submit
-                        <span class="material-symbols-outlined">arrow_forward
-                        </span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
                       </a>
+                      <div id="successMessage" style="display: none; color: green;"></div>
                      </form>
+
               </div>
           </div>
       </div>
@@ -1119,7 +1124,7 @@
        
   <div class="row">
     <div class="col-sm-6 col-md-4">
-        <div class="contctdv d-flex align-items-start mb-5 mb-md-0">
+        <div class="contctdv d-flex align-items-start mb-4 mb-md-0">
             <img src="content/images/Contact-us/map-pointer.svg" alt="map">
             <div class="contctcntnt">
                 <h4 class="mb-2 mb-md-3 lh-base fw-medium">CORP. OFFICE</h4>
@@ -1128,7 +1133,7 @@
         </div>
     </div>
     <div class="col-sm-6 col-md-4">
-        <div class="contctdv d-flex align-items-start mb-5 mb-md-0">
+        <div class="contctdv d-flex align-items-start mb-4 mb-md-0">
             <img src="content/images/Contact-us/map-pointer.svg" alt="map">
             <div class="contctcntnt">
                 <h4 class="mb-2 mb-md-3 lh-base fw-medium">REGD. OFFICE</h4>

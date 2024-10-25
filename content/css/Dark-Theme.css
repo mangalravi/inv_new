@@ -289,7 +289,7 @@ color:#fff;
 }
 .contctcntnt p,
 .contctdv a,
-.mainform .input-container .label{
+.mainform .input-container label{
   color:#fff;
   opacity:0.7;
 }
@@ -318,6 +318,9 @@ color:#fff;
 }
 .second-section  h3.txtwhtlgt{
   color: var(--bs-light-heading-color) !important;
+}
+.scroll-year-text {
+  color: #b4b4b5;
 }
 /* contact us end */
 @media(992px < width){
