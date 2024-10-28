@@ -439,20 +439,39 @@ jQuery(function () {
 
     // Handle mouse wheel event
     function handleWheel(event) {
-      event.preventDefault();
       const currentSlide = $slider1.slick('slickCurrentSlide');
       let newSlide;
 
       const delta = event.originalEvent.deltaY;
 
+      // Only prevent default scrolling for slide changes
       if (delta > 0) {
         newSlide = Math.min(currentSlide + 1, totalSlides - 1);
       } else {
         newSlide = Math.max(currentSlide - 1, 0);
       }
 
-      syncSlides(newSlide);
+      // Sync slides if not at the ends
+      if (newSlide !== currentSlide) {
+        event.preventDefault(); // Prevent default scroll
+        syncSlides(newSlide);
+      }
     }
+
+    // Handle mouse enter/leave events on the slider
+    function handleMouseEnter() {
+      $(this).on('wheel', handleWheel); // Add wheel event when mouse enters
+    }
+
+    function handleMouseLeave() {
+      $(this).off('wheel', handleWheel); // Remove wheel event when mouse leaves
+    }
+
+    // Attach event listeners for mouse enter and leave
+    $slider1.on('mouseenter', handleMouseEnter);
+    $slider1.on('mouseleave', handleMouseLeave);
+    $slider2.on('mouseenter', handleMouseEnter);
+    $slider2.on('mouseleave', handleMouseLeave);
 
     // Handle mouse and touch dragging
     function handleDragStart(e) {
@@ -481,8 +500,6 @@ jQuery(function () {
 
     // Attach event listeners
     $scrollbarHandle.on('mousedown touchstart', handleDragStart);
-    $slider1.on('wheel', handleWheel);
-    $slider2.on('wheel', handleWheel);
 
     // Click event for dots
     $('.rounded-dots-scrollbar').on('click', function() {
@@ -502,83 +519,96 @@ jQuery(function () {
 
 
 
+
 // contact form validation
-
-document.getElementById('submitBtn').addEventListener('click', function(event) {
-  event.preventDefault(); 
-  clearErrorMessages();
-
-  const fields = {
-    fullName: {
-      value: document.getElementById('fullName').value.trim(),
-      errorId: 'fullNameError',
-      validate: (value) => value.length >= 3,
-      errorMessage: "Please enter your name"
-    },
-    email: {
-      value: document.getElementById('email').value.trim(),
-      errorId: 'emailError',
-      validate: (value) => /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|.+\.in)$/.test(value),
-      errorMessage: "Enter a valid email"
-    },
-    phone: {
-      value: document.getElementById('phone').value.trim(),
-      errorId: 'phoneError',
-      validate: (value) => /^[0-9]{10}$/.test(value),
-      errorMessage: "Enter a valid phone number"
-    }
-  };
-  let isValid = true;
-
-  for (const field in fields) {
-    if (!fields[field].validate(fields[field].value)) {
-      document.getElementById(fields[field].errorId).textContent = fields[field].errorMessage;
-      document.getElementById(fields[field].errorId).style.display = 'block';
-      isValid = false;
+document.addEventListener('DOMContentLoaded', function() {
+  const submitBtn = document.getElementById('submitBtn');
+  
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      clearErrorMessages();
+  
+      const fields = {
+        fullName: {
+          value: document.getElementById('fullName').value.trim(),
+          errorId: 'fullNameError',
+          validate: (value) => value.length >= 3,
+          errorMessage: "Please enter your name"
+        },
+        email: {
+          value: document.getElementById('email').value.trim(),
+          errorId: 'emailError',
+          validate: (value) => /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|.+\.in)$/.test(value),
+          errorMessage: "Enter a valid email"
+        },
+        phone: {
+          value: document.getElementById('phone').value.trim(),
+          errorId: 'phoneError',
+          validate: (value) => /^[0-9]{10}$/.test(value),
+          errorMessage: "Enter a valid phone number"
+        }
+      };
+  
+      let isValid = true;
+  
+      for (const field in fields) {
+        if (!fields[field].validate(fields[field].value)) {
+          document.getElementById(fields[field].errorId).textContent = fields[field].errorMessage;
+          document.getElementById(fields[field].errorId).style.display = 'block';
+          isValid = false;
+        }
+      }
+  
+      if (isValid) {
+        showSuccessMessage("Form submitted successfully!");
+      }
+    });
+  }
+  
+  const inputArray = ['fullNameError', 'emailError', 'phoneError'];
+  
+  // Clear error messages
+  function clearErrorMessages() {
+    inputArray.forEach(id => {
+      document.getElementById(id).style.display = 'none';
+    });
+  }
+  
+  // Show success message and reload the page
+  function showSuccessMessage(message) {
+    const successMessageDiv = document.getElementById('successMessage');
+    successMessageDiv.textContent = message;
+    successMessageDiv.style.display = 'block';
+    successMessageDiv.classList.add('success'); 
+  
+    setTimeout(() => {
+      successMessageDiv.style.display = 'none';
+      location.reload(); 
+    }, 1000);
+  }
+  
+  // Input validation
+  function setupInputValidation(inputId, validateFn, errorId) {
+    const inputElement = document.getElementById(inputId);
+    if (inputElement) {
+      inputElement.addEventListener('input', function() {
+        const isValid = validateFn(this.value.trim());
+        document.getElementById(errorId).style.display = isValid ? 'none' : 'block';
+      });
     }
   }
-
-  if (isValid) {
-    showSuccessMessage("Form submitted successfully!");
+  
+  // Validate inputs
+  setupInputValidation('fullName', (value) => value.length >= 3, 'fullNameError');
+  setupInputValidation('email', (value) => /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|.+\.in)$/.test(value), 'emailError');
+  
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function() {
+      this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+      const isValid = /^[0-9]{10}$/.test(this.value);
+      document.getElementById('phoneError').style.display = isValid ? 'none' : 'block';
+    });
   }
-});
-
-const inputArray = ['fullNameError', 'emailError', 'phoneError'];
-
-// Clear error messages
-function clearErrorMessages() {
-  inputArray.forEach(id => {
-    document.getElementById(id).style.display = 'none';
-  });
-}
-
-// Show success message and reload the page
-function showSuccessMessage(message) {
-  const successMessageDiv = document.getElementById('successMessage');
-  successMessageDiv.textContent = message;
-  successMessageDiv.style.display = 'block';
-  successMessageDiv.classList.add('success'); 
-
-  setTimeout(() => {
-    successMessageDiv.style.display = 'none';
-    location.reload(); 
-  }, 1000);
-}
-
-// Input validation
-function setupInputValidation(inputId, validateFn, errorId) {
-  document.getElementById(inputId).addEventListener('input', function() {
-    const isValid = validateFn(this.value.trim());
-    document.getElementById(errorId).style.display = isValid ? 'none' : 'block';
-  });
-}
-
-// Validate inputs
-setupInputValidation('fullName', (value) => value.length >= 3, 'fullNameError');
-setupInputValidation('email', (value) => /^[a-zA-Z0-9._%+-]+@(gmail\.com|outlook\.com|.+\.in)$/.test(value), 'emailError');
-
-document.getElementById('phone').addEventListener('input', function() {
-  this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
-  const isValid = /^[0-9]{10}$/.test(this.value);
-  document.getElementById('phoneError').style.display = isValid ? 'none' : 'block';
 });

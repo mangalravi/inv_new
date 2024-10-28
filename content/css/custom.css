@@ -278,25 +278,25 @@
     margin-left: 0;
   }
   .submenu {
-    position: absolute;
-    top: 100%;
-    max-height: 486px;
-    left: 50%;
-    transform:translateX(-50%);
-   z-index: 1000;
-   padding: 2.625rem 2.188rem 1.25rem;
-    list-style: none;
-    width: 100%;
-    min-width: 180px;
-    visibility: hidden;
-    opacity: 0;
-    box-shadow: 0px 8px 14px 0px #0000000F;
-    backdrop-filter: blur(30px);
-    background: linear-gradient(97.03deg, rgba(242, 252, 252, 0.9) 5.33%, #FFFFFF 102.02%);
-    z-index: 1;
-    overflow: hidden;
-      transition:all 0.25s;
-  }
+      position: absolute;
+      top: 100%;
+      max-height: 486px;
+      left: 50%;
+      transform:translateX(-50%);
+      z-index: 1000;
+      padding: 2.625rem 2.188rem 1.25rem;
+      list-style: none;
+      width: 100%;
+      min-width: 180px;
+      visibility: hidden;
+      opacity: 0;
+      box-shadow: 0px 8px 14px 0px #0000000F;
+      backdrop-filter: blur(30px);
+      background: linear-gradient(97.03deg, rgba(242, 252, 252, 0.9) 5.33%, #FFFFFF 102.02%);
+      z-index: 1;
+      overflow: hidden;
+      transition:all 0.175s;
+}
   .submenu:after{
     content: '';
     position: absolute;
@@ -368,10 +368,14 @@
     outline: none;
   }
   .parent-menu:hover .submenu, .parent-menu:focus .submenu {
-    visibility: visible;
-    opacity: 1;
-  transition:all 0.5s;
-  }
+  visibility: visible;
+  opacity: 1;
+  transition:all 0.1s;
+  -webkit-transition:all 0.1s;
+  -moz-transition:all 0.1s;
+  -ms-transition:all 0.1s;
+  -o-transition:all 0.1s;
+}
   .parent-menu:hover a, .parent-menu:focus a {
     outline: none;
   }
@@ -2125,24 +2129,35 @@
     height:400px;
   }
   .ldrdv{
-    border: 1px solid #d5dce5;
-    background: #fcfcfc;
     border-radius: 5px;
     transition:all 0.7s;
   }
   .ldrdv .imgdv{
     border-radius:0.25rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+   }
   .ldrdv .imgdv img{
    transition:all 0.7s;
+  }
+  .ps52{
+    padding-left:52px ;
+  }
+  .pe52{
+    padding-right:52px ;
   }
   .ldrdv span{
   color:var(--bs-heading-color);
   transition:all 0.7s;
   }
-  .btmldr ul{
+  .leaders .tab-content .position-absolute{
+    background: #fff;
+    bottom: 1.875rem;
+    right: 1.875rem;
+    border-radius: 0.5rem;
+  }
+  .leaders .tab-content .position-absolute h5{
+   font-size:calc(var(--bs-body-font-size) * 1.125);
+  }
+    .btmldr ul{
   list-style:none;
   gap:0.5rem
   }
@@ -2155,28 +2170,68 @@
     color:var(--bs-heading-color);
     font-family:var(--bs-heading-font-family);
     }
-  
+  .tab-pane .position-relative img{
+    border-radius:0.5rem;
+    -webkit-border-radius:0.;
+    -moz-border-radius:0.;
+    -ms-border-radius:0.;
+    -o-border-radius:0.;
+}
   .ldrdv:hover span{
     transform:translateX(5px);
     transition:all 0.7s;
   }
-  .ldrdv ul li:nth-child(1) a:hover img{
-    filter: invert(18%) sepia(64%) saturate(4636%) hue-rotate(344deg) brightness(97%) contrast(87%);
-  }
-  .ldrdv ul li:nth-child(2) a:hover img{
-    filter: invert(25%) sepia(99%) saturate(1467%) hue-rotate(194deg) brightness(96%) contrast(95%);
-  }
-  
   .ldrdv:hover .imgdv img{
     transform:scale(1.2);
     overflow:hidden;
     transition:all 0.7s;
   }
+  .pt112{
+    padding-top: 112px;
+  }
+  section.leaders {
+    background-image: url(../images/Leadership/leadership-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 17rem;
+    background-size: cover;
+}
+  .drtrtxt h3{
+    font-size: calc(var(--bs-body-font-size) * 2.25);
+    margin-bottom: 2rem;
+    line-height: 46px;
+}
+.leaders .row.cus-g-30{
+  --bs-gutter-x: 1.875rem;
+  --bs-gutter-y: 1.875rem;
+}
+  .drtrtxt p{
+    font-size: calc(var(--bs-body-font-size) * 1.125);
+}
+.leaders .scndtbhdng{
+  margin-bottom:2rem;
+  font-size: calc(var(--bs-body-font-size) * 1.875);
+  line-height:38.28px
+}
+  .leaders .nav-pills .nav-link{
+    color: var(--bs-heading-color);
+    border-bottom: 2px solid #D9D9D9;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: calc(var(--bs-body-font-size)* 1.125);
+    font-weight: 600;
+    line-height: 24.59px;
+    padding: 1.25rem;
+    box-shadow:none;
+  }
+ .leaders .nav-pills .nav-link.active{
+    color: var(--bs-heading-color);
+    border-bottom:2px solid var(--bs-heading-color);
+  }
   
   /* leadership ends */
   
-  
-  
+    
   #successMessage {
     margin-top: 10px;
     font-size: calc(var(--bs-body-font-size) * 0.775);

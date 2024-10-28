@@ -309,10 +309,6 @@ color:#fff;
 .mainform .input-container input{
   color:#fff;
 }
-.ldrdv {
-  background-color: var(--bs-card-bg) !important;
-  border: 0;
-}
 .btmldr ul img{
   filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(105%) contrast(101%);
 }
@@ -323,6 +319,29 @@ color:#fff;
   color: #b4b4b5;
 }
 /* contact us end */
+
+/* leadership start */
+
+section.leaders {
+  background-image: url(../images/Leadership/leadership-bg-dark.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.leaders .tab-content .position-absolute h5{
+  color:#0E1726;
+}
+.leaders .tab-content .position-absolute p{
+  color:#1D2A41;
+}
+.leaders .nav-pills .nav-link {
+  color: #b4b4b5;
+  border-bottom: 2px solid #414647;
+}
+
+/* leadership end */
+
+
+
 @media(992px < width){
   header.nvbrhdr.bg-white nav {
     background: #000000;

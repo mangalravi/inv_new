@@ -536,3 +536,42 @@ padding:0 20px;
 .valdv b{
   font-size: calc(var(--bs-body-font-size) * 0.775);
 }
+
+/* leadership start */
+.leaders .nav-pills .nav-link{
+  font-size:0.875rem;
+  padding:0.875rem;
+}
+.ps52{
+  padding-left: 0;
+}
+.pe52 {
+  padding-right: 0;
+}
+.leaders .tab-content .position-absolute {
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+.leaders .tab-content .position-absolute h5,.drtrtxt p {
+  font-size: var(--bs-body-font-size);
+}
+.leaders .tab-content .position-absolute p {
+  font-size: calc(var(--bs-body-font-size) * 0.875);
+}
+.mobhdng{
+  font-size:calc(var(--bs-body-font-size) * 1.35);
+}
+.leaders .scndtbhdng{
+  font-size:calc(var(--bs-body-font-size) * 1.35);
+  margin-bottom: 1.5rem;
+}
+section.leaders {
+  padding-bottom: 25rem;
+  }
+  .cardhd {
+    font-size: var(--bs-body-font-size);
+  }
+  .cardhd + p{
+    font-size:calc(var(--bs-body-font-size) * 0.875);
+  }
+/* leadership ends */
