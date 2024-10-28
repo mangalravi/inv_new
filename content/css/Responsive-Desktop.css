@@ -518,7 +518,7 @@ padding:0 20px;
   top: -1rem;
 }
 .scroll-year-text {
-  font-size: 0.875rem;
+  font-size: calc(var(--bs-body-font-size) * 0.875);
   top: -0.5rem;
 }
 .mb80{
@@ -530,9 +530,9 @@ padding:0 20px;
   margin-bottom: 0.5rem;
 }
 .valdv p{
-  font-size: 0.875rem;
+  font-size: calc(var(--bs-body-font-size) * 0.875);
   line-height: 1.25rem;
 }
 .valdv b{
-  font-size: 0.775rem;
+  font-size: calc(var(--bs-body-font-size) * 0.775);
 }
