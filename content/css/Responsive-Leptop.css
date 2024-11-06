@@ -452,4 +452,37 @@ min-width:auto;
 section.leaders {
   padding-bottom: 15rem;
   }
+ 
 /* leadership ends */
+
+/* power start */
+.maindiv .power h1 {
+  font-size: calc(var(--bs-body-font-size)* 2.15);
+}
+
+
+.counternum-section .outerleftdv {
+  padding: 1.25rem 1.25rem 1.5rem 2.188rem;
+  margin-left: 1.25rem;
+}
+.counternum-section .outerleftdv p{
+  font-size:0.875rem;
+  }
+ 
+  .toplftbdr {
+    padding: 2rem;
+}
+.outerrightdv .numdv > div {
+  padding-bottom: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+.outerrightdv .numdv span:not(.counter) {
+  font-size: 0.875rem;
+  line-height: 1.35rem;
+}
+.numdv.gap-20 h2,
+.numdv span:first-child{
+  font-size: calc(var(--bs-body-font-size)* 2.375);
+  line-height: 2.5rem;
+}
+/* power ends */

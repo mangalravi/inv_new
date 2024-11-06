@@ -42,17 +42,17 @@ header nav{
 background-color:var(--bs-card-bg) !important;
   }
   section.second-section{
-    background: url(../images/bg-round-dark.png) no-repeat;
+    background: url(../images/home/bg-round-dark.png) no-repeat;
     background-position: 0 125%;
     background-size: 100% 175%;
   }
   section.digital{
-    background: url(../images/demo-bg-dark.jpg) no-repeat;
+    background: url(../images/home/demo-bg-dark.jpg) no-repeat;
     background-position: right center !important;
     background-size:cover !important;
   }
   .insidesec {
-    background: url(../images/testimonial-bg-dark.jpg) no-repeat;
+    background: url(../images/home/testimonial-bg-dark.jpg) no-repeat;
     background-position: center;
     background-size: 100% 100%;
     transition: all 0.7s;
@@ -92,10 +92,10 @@ background-color:var(--bs-card-bg) !important;
      border-left: 1px solid var(--bs-border-color);
     }
     #First .offcanvas-header button{
-      background: url(../images/close-white.svg);
+      background: url(../images/home/close-white.svg);
     }
     .accordion-button::after,.accordion-button:not(.collapsed)::after{
-      background-image:url(../images/acc-drop.svg);
+      background-image:url(../images/home/acc-drop.svg);
     }
    .accordion-button:not(.collapsed)::after{
       filter: invert(39%) sepia(97%) saturate(46%) hue-rotate(171deg) brightness(93%) contrast(85%);
@@ -221,7 +221,7 @@ color:#727381;
   background:#010102;
 }
 .txtimgtop{
-  background-image: url(../images/about-us/dark/we-are-shaping-bg.jpg);
+  background-image: url(../images/about-us/about/dark/we-are-shaping-bg.jpg);
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
@@ -258,11 +258,11 @@ color:#727381;
   background:var(--bs-card-bg);
 }
 .grow{
-  background: url(../images/about-us/dark/about-top-bg.jpg) no-repeat;
+  background: url(../images/about-us/about/dark/about-top-bg.jpg) no-repeat;
   background-size:cover ;
 }
 .valueadd{
-  background: url(../images/about-us/dark/value-addition-bg.jpg) no-repeat;
+  background: url(../images/about-us/about/dark/value-addition-bg.jpg) no-repeat;
    background-size:cover ;
  }
  .timeline{
@@ -323,9 +323,7 @@ color:#fff;
 /* leadership start */
 
 section.leaders {
-  background-image: url(../images/Leadership/leadership-bg-dark.jpg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  background: #272728;
 }
 .leaders .tab-content .position-absolute h5{
   color:#0E1726;
