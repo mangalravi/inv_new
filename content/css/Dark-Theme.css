@@ -335,7 +335,63 @@ color:#fff;
   color: #b4b4b5;
   border-bottom: 2px solid #414647;
 }
-
+.imgvisiblity img:nth-child(1){
+  display:none;
+}
+.imgvisiblity img:nth-child(2){
+  display:block;
+}
+.sticky-component,.powerpoint{
+  background:#272728;
+} 
+.stickydv:hover {
+ background: #19191a;
+}
+.counternum-section.power {
+  background: url(../images/industries/power/abstract-curves-background-with-bokhe-lights-dark.png) no-repeat;
+  background-size: cover;
+}
+.maindivutility .power h1 {
+  color:#0E1726;
+}
+.maindivutility .power p {
+  color:#1d2a41;
+}
+.imgouterdv.power {
+  background-image: linear-gradient(to left, #272728 45%, #393185), linear-gradient(to bottom, #272728 25%, #E4097F), linear-gradient(to left, #E4097F, #272728 60%), linear-gradient(to top, #272728, #393185);
+}
+.faqpower{
+  background:#010102;
+}
+.faqpower .accordion-button{
+  color:#fff;
+}
+.faqpower .accordion-item, .faqpower .accordion-flush>.accordion-item:last-child {
+  border-bottom: 1px solid #333366;
+}
+.faqpower .accordion-button::after {
+filter: invert(100%) sepia(96%) saturate(14%) hue-rotate(235deg) brightness(104%) contrast(102%);
+}
+.faqpower .accordion-button:not(.collapsed),.faqpower .accordion-body {
+  color: #ffffff;
+}
+.counternum-section.water {
+  background: url(../images/industries/water/water-drop-dark.png) no-repeat;
+  background-size: cover;
+}
+.imgouterdv.water {
+background-image: linear-gradient(to left, #272728 45%, #008CCF), linear-gradient(to bottom, #272728 25%, #173B8E), linear-gradient(to left, #173B8E, #272728 60%), linear-gradient(to top, #272728, #008CCF);
+}
+.counternum-section.gas {
+  background: url(../images/industries/gas/gas-bnr-dark.png) no-repeat;
+  background-size: cover;
+}
+.imgouterdv.gas {
+ background-image: linear-gradient(to left, #272728 45%, #FCC301), linear-gradient(to bottom, #272728 25%, #DFAD01), linear-gradient(to left, #DFAD01, #272728 60%), linear-gradient(to top, #272728, #FCC301);
+}
+section.leaders {
+  background: #272728;
+}
 /* leadership end */
 
 /* industry start */

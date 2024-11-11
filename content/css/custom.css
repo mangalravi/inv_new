@@ -2267,6 +2267,9 @@
   
   /* power page start */
   /* sticky-component start */
+  .imgvisibility img:nth-child(2){
+    display:none;
+  }
 .maindivutility{
   height:100%;
 }
@@ -2560,7 +2563,7 @@ animation-play-state:paused;
 
   /* gas page start */
   .counternum-section.gas {
-    background: url(../images/industries/water/water-drop.png) no-repeat;
+    background: url(../images/industries/gas/gas-bnr.png) no-repeat;
     background-size: cover;
 }
   .counternum-section.gas .outerleftdv::before {

@@ -98,9 +98,7 @@ height: 1px;
 top: -1.5rem;
 font-size: calc(var(--bs-body-font-size) * 0.875);
 }
-.timelinemain {
-flex-direction: column;
-}
+
 .timeline .slick-dots {
 gap: 1rem;
 }
@@ -268,8 +266,8 @@ font-weight: 500;
 .innoffcan .accordion-button::after{
 --bs-accordion-btn-icon-width: 1rem;
 }
-.navbar>.container,
-.navbar>.container-fluid{
+.container,
+.container-fluid{
   padding:0 1.25rem;
 }
 section > .row ,footer > .row {
@@ -554,8 +552,8 @@ padding:0 20px;
   padding-right: 0;
 }
 .leaders .tab-content .position-absolute {
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 0.7rem;
+  right: 6.35rem;
 }
 .leaders .tab-content .position-absolute h5,.drtrtxt p {
   font-size: var(--bs-body-font-size);
@@ -570,15 +568,13 @@ padding:0 20px;
   font-size:calc(var(--bs-body-font-size) * 1.35);
   margin-bottom: 1.5rem;
 }
-section.leaders {
-  padding-bottom: 25rem;
-  }
   .cardhd {
     font-size: var(--bs-body-font-size);
   }
   .cardhd + p{
     font-size:calc(var(--bs-body-font-size) * 0.875);
   }
+ 
 /* leadership ends */
 
 /* power start */
